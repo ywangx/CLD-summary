@@ -273,24 +273,69 @@ The inclusions $\mathcal{A}^{p,q}_{G,\mathcal{D}}(X) \subseteq \mathcal{A}^{p,q}
 In reality, we sometimes need to restrict our attention to $G$-forms that are tropicalized by particular charts, or $G$-forms with compact support. To carry out this restriction, family with supports $\Phi$ and family of atlases $\Gamma$ are introduced. The $G$-forms tropicalized by $\mathcal{D} \in \Gamma$ with supports in $\Phi$ is denoted $\mathcal{A}^{p,q}_{\Phi, \Gamma}(X)$. This is also a topological space, and various continuity properties under $j_!$, $j^*$, $d', d''$ and $J$ are studied. 
 
 \subsection*{Chapter 4: Calibration and Integration on PL spaces}
-\subsubsection*{4.1: PL negligeability}
+\subsubsection*{4.1: PL negligeability.}
 Let $X$ be a PL space and $d \in \mathbf{Z}_{\geq 0}$. We define a pre-subsheaf of $\mathcal{A}_{X_G}$ by: for any $Y$ that is PL in $X$, set \[\mathcal{I}_d(Y) \coloneqq \ker(\mathcal{A}_{X_G}(Y) \to \mathcal{A}_{X_G}(Y^{(d)})).\] Intuitiively, these are smooth functions that vanish at points of tropical dimension $\dim \geq d$. This is in fact a sheaf. For any $\mathcal{A}_{X_G}$-module $\mathcal{M}$, we have \[\mathcal{I}_d\mathcal{M}(Y) \coloneqq \ker(\mathcal{M}(Y) \to \mathcal{M}(Y^{(d)})).\] If $d = \max{\{p,q\}}$ and $\mathcal{G}$ is any coefficient sheaf, then $\mathcal{I}_d\mathcal{G}_{X_G} = \mathrm{Ann}(\mathcal{G}^{p,q}_{X_G})$. To consider forms that are supported at $\dim(X)$, we take the quotient $\mathcal{G}_{X_G}^{p,q} / \mathcal{I}_n\mathcal{G}^{p,q}_{X_G}$, which is locally free of rank ${n \choose p}\cdot {n \choose q}$ over the ring $\mathcal{G}_{X_G} / \mathcal{I}_n\mathcal{G}_{X_G}.$ If $f \colon X \to Y$ is a piecewise immersion and compact, then we can make sense of pushing forward of forms by using cellular decompositions. 
 
-\subsubsection*{4.2: Orientation of PL spaces}
-For any PL space $X$ of dimension $n$, and fixed $G$-covering $\mathcal{C}$ of $X$, then for any $C \in \mathcal{C}$ we associate an $\{\pm1\}$-torsor $\mathrm{Or}(C)$, which encodes the two orientations of $C$. Then $\{\mathrm{Or}(C)\}_{C \in \mathcal{C}}$ forms a diagram, and the limit is denoted as $\mathrm{Or}_{\mathcal{C}}(X)$, whose sections are compactible orientations of $\mathcal{C}$. By taking colimit over all $G$-covers, we get a sheaf of orientation $\mathrm{Or}_G(X)$, which is independent of the chosen $G$-cover. 
+\subsubsection*{4.2: Orientation of PL spaces.}
+For any PL space $X$ of dimension $n$, and fixed $G$-covering $\mathcal{C}$ of $X$, then for any $C \in \mathcal{C}$ we associate an $\{\pm1\}$-torsor $\mathrm{Or}(C)$, which encodes the two orientations of $C$. Then $\{\mathrm{Or}(C)\}_{C \in \mathcal{C}}$ forms a diagram, and the limit is denoted as $\mathrm{Or}_{\mathcal{C}}(X)$, whose sections are compactible orientations of $\mathcal{C}$. By taking colimit over all $G$-covers, we get a sheaf of orientation $\mathrm{Or}_{X_G}$, which is independent of the chosen $G$-cover. 
 
-If $\mathcal{M}$ is an $\mathcal{A}_{X_G}$-module annihilated by $\mathcal{I}_n$, such as $\mathcal{G}^{p,n}_G, \mathcal{G}^{n,p}_G$ for $p \leq n$, then for any PL subspace $Y \subseteq X$, let $\{\pm1\}$ act on $\mathcal{M}$ by multiplication by $\pm 1$. Then for any fixed $\epsilon \in \mathrm{Or}_G(Y)$, we have a bijection \[\mathcal{M}(Y) \to \mathcal{M}\times_{\{\pm 1\}} \mathrm{Or}_G(Y), m \mapsto (m,\epsilon).\]
+If $\mathcal{M}$ is an $\mathcal{A}_{X_G}$-module annihilated by $\mathcal{I}_n$, such as $\mathcal{G}^{p,n}_G, \mathcal{G}^{n,p}_G$ for $p \leq n$, then for any PL subspace $Y \subseteq X$, let $\{\pm1\}$ act on $\mathcal{M}$ by multiplication by $\pm 1$. Then for any fixed $\epsilon \in \mathrm{Or}_G(Y)$, we have a bijection \[\mathcal{M}(Y) \to \mathcal{M}\times_{\{\pm 1\}} \mathrm{Or}_{X_G}(Y), m \mapsto (m,\epsilon).\]
 \begin{center}
     \includegraphics[width = 0.5\textwidth]{4.1.png}
 \end{center}
 
 \subsubsection*{4.3: Volume forms on PL spaces}
+Let $X$ be a PL space of dimension $n$ and $\mathcal{G}$ be a coefficient sheaf. The $G$-sheaf of volume forms with $\mathcal{G}$-coefficients is \[|\mathcal{G}^{n,0}_G| \coloneqq \mathcal{G}_G^{n,0} \times_{\{\pm 1\}}\mathrm{Or}_{X_G}.\] This is locally of rank $1$ over $\mathcal{G}_{X_G} / \mathcal{I}_n \mathcal{G}_{X_G}$. 
 
-\subsubsection*{4.4: Measures associated to vector volumes}
+\begin{example}
+    Let $X = \mathbf{R}^n$ with basis $x_1, \cdots, x_n$ and $\underline{\mathbf{R}}$ be the constant sheaf. Then $\omega_{\mathbf{R}^n} = d'x_1 \cdots d'x_n \in |\underline{\mathbf{R}}^{n,0}_{X_G}|$ is the canonical volume form.
+\end{example}
 
-\subsubsection*{4.5: Calibration and integration of $(n,n)$-forms}
+One can naturally pullback such volume forms. If $f$ is a piecewise immersion of PL spaces, then one can also pushforward them by 4.1. 
 
-\subsubsection*{4.5: Calibration and integration of $(n-1,n)$-forms}
+\subsubsection*{4.4: Measures associated to vector volumes.}
+We get a map of $G$-sheaves $|\mathcal{B}_{X_G}^{n,0}| \to \mathrm{Meas}_{\mathrm{Bor},X}$, where $\mathcal{B}$ stands for Borel coefficients. This is carried out in several steps. 
+
+\begin{itemize}
+    \item If $f \colon X \hookrightarrow \mathbf{R}^n$ is an embedding, where $X$ is a PL space, then we let $\lambda_{X,f}$ be the unique Borel measure on $X$ such that $f_* \lambda_{X,f}$ equals to the Lebesgue measure on $f(X)$. 
+    \item For any $\omega \in |\mathcal{B}^{n,0}_{X_G}(Y)|$ where $Y$ is a PL subspace of $X$, let $\alpha^{\sharp}$ be a Borel function on a small neighborhood of $f(X)$ such that $f^*(\alpha^{\sharp} \omega_{\mathbf{R}^n}) = \omega.$ The Borel measure associated to $\omega$ is then \[\omega_{\mathrm{Bor}} \coloneqq f^*(|\alpha^{\sharp}|)\cdot \lambda_{X,f}.\] This measure is independent of the choice of $\alpha^{\sharp}$.
+    \item Show that this construction respects inclusion of PL subspaces $Y' \subseteq Y$. 
+    \item Glue to get a $G$-sheaf of Borel measures on $X$. 
+\end{itemize}
+
+If $\alpha^{\sharp} \in L^1_{\mathrm{loc}}$, then we can define a Radon measure $\omega_{\mathrm{Rad}}$ whose total variation equals $\omega_{\mathrm{Bor}}$. The construction of Borel measures commutes with pullback maps on cells. For piecewise immersions $f$, we have $(f_*\alpha)_{\mathrm{Bor}} \leq f_*(\alpha_{\mathrm{Bor}}).$
+
+
+\subsubsection*{4.5: Calibration and integration of $(n,n)$-forms.}
+The idea of integration an $(n,n)$-form on an $n$-dimensional PL space is to contract the $(0,n)$-part using a volume vector, and identify the $(n,0)$-part with the usual de Rham $n$-forms. Formally, we introduce the sheaf of calibrations on $X$, given by \[\mathrm{Cali}_X \coloneqq \mathcal{H}om_{X_G}(|\mathcal{G}^{n,0}_{X_G}|, \mathcal{G}_{X_G} / \mathcal{I}_n \mathcal{G}_{X_G}),\] which is $G$-locally of rank $1$ over $\mathcal{G}_{X_G} / \mathcal{I}_n \mathcal{G}_{X_G}$. For any PL cell $Y$ of dimension $n$, the following commutative diagram 
+
+\begin{center}
+\begin{tikzcd}
+{\mathcal{G}^{0,n}_{X_G}(Y)} \arrow[r] \arrow[rd, "J"] & {|\mathcal{G}^{0,n}_{X_G}|(Y)} \arrow[r, "\mu"] \arrow[d, no head, Rightarrow] & \mathcal{G}_{X_G} / \mathcal{I}_n \mathcal{G}_{X_G}(Y) \arrow[d, "\simeq"]                  \\
+                                                       & {\mathcal{G}^{n,0}_{X_G}(Y)}                                                   & \mathcal{G}_{X_G} / \mathcal{I}_n \mathcal{G}_{X_G} \times_{\{\pm 1\}} \mathrm{Or}_{X_G}(Y)
+\end{tikzcd}
+\end{center}
+tensored with $\mathcal{G}^{n,0}_{X_G}$ gives us a map\footnote{This is because $\mathcal{G}^{n,0}_{X_G}$ has rank $1$ over $\mathcal{G}_{X_G} / \mathcal{I}_n \mathcal{G}_{X_G}$.} \[\mathcal{G}^{n,n}_{X_G} \to |\mathcal{G}^{n,0}_{X_G}|,\ \ \  \omega \mapsto \langle \omega, \mu\rangle.\] If $f \colon Y \to X$ is a piecewise immersion where $\dim(X), \dim(Y) \leq n$, then for any $(n,n)$-form $\omega$ on $X$ and any $\mu \in \mathrm{Cali}_Y$, we have a projection formula \[f_*\langle f^* \omega, \mu \rangle = \langle \omega, f_* \mu \rangle.\]
+
+\subsubsection*{4.6: Calibration and integration of $(n-1,n)$-forms.}
+Let $X$ be a PL space of dimension $n$ with a cell decomposition $\mathcal{C}$, and $\mu \in \Gamma(\mathrm{Cali}_X)$. Let $C \in \mathcal{C}$ be an $n$-dimensional cell, with $F < C$ be an $(n-1)$-dimensional cell. For any $(n-1,n)$-form $\omega$, we can define an $(n-1,n)$-form on $F$ with respect to the structure $F < C$, denoted $\langle \omega, \mu \rangle |_{(F,C)}$. Further, there exists a unique $n-1$-form $\langle \omega, \mu\rangle_{\mathcal{C}}$ on the union of all $(n-1)$-cells of $\mathcal{C}$ such that for any $(n-1)$-cell $F$, the following is satisfied: 
+\[\langle \omega, \mu \rangle_{\mathcal{C}} |_F = \sum_{C \supseteq F, C \in \mathcal{C}_n} \langle \omega, \mu \rangle|_{\langle F, C \rangle}.\]
+Here $\mathcal{C}_n \subseteq \mathcal{C}$ is the collection of all $n$-dimensional cells. It turns out that this form is actually independent of the choice of the decomposition $\mathcal{C}$, and therefore is simply denoted as $\langle \omega, \mu \rangle$, an $(n-1)$-form on $X$. This construction again satisfies a version of the projection formula, and moreover if there is a locally finite $G$-covering of $X$, there is an inclusion-exclusion formula for the calculation of this form. 
+
+We define integrations
+\begin{align*}
+    \int_X \langle d'\omega, \mu \rangle &\coloneqq \sum_{C \in \mathcal{C}_n} \int_C \langle d' \omega, \mu\rangle,\\
+    \int_{\partial X} \langle \omega, \mu \rangle &\coloneqq \sum_{D \in \mathcal{C}_{n-1}} \sum_{D\subseteq C \in \mathcal{C}_n} \int_D \langle \omega, \mu \rangle.
+\end{align*}
+
+\begin{theorem}[Stokes' formula]
+    Let $\omega$ be an $(n-1,n)$-form with $C^1_c$-coefficient on $X$. Then \[\int_X \langle d'\omega, \mu \rangle = \int_{\partial X} \langle \omega, \mu \rangle.\]
+\end{theorem}
+
+\begin{theorem}[Green's formula]
+    Let $\alpha, \beta$ be symmetric $(p,p), (q,q)$-forms on $X$ with $p+q = n-1$. Suppose either a) their coefficients are $C^2_c$, or b) $\mathrm{supp}(\alpha) \cap \mathrm{supp}(\beta)$ is compact, then 
+    \[\int_X \langle \alpha \wedge d'd''\beta - d'd''\alpha \wedge \beta, \mu \rangle = \int_{\partial X} \langle \alpha \wedge d'' \beta - d'' \alpha \wedge \beta, \mu \rangle. \]
+\end{theorem}
 
 
 
