@@ -160,7 +160,7 @@ For any $U \subseteq V$ open, the differential superforms of type $(p,q)$ is $\m
 
 One can replace $C^\infty$ by other sheaves on $V$ and obtain superforms with different coefficients. 
 
-\subsubsection*{1.5: Integrating a $(p,n)$-form on $p$-dimensional subspace.} Given an abstract vector space $V$ of dimension $n$, the integration of a $(p,n)$-form with Borel coefficients (on an $p$-dimensional subspace of $V$) strongly depend on the choice of identification between $V$ and $\mathbf{R}^{\dim n}$. The fix to this is to specify a volume vector $\mu = (\lambda, O) \in |\Lambda^n V| \coloneqq \Lambda^n V \times^{\{-1,1\}} \mathrm{Or}(V)$. This is equivalent to choosing an oriented coordinate system on $V$. Using a vector volume, one can constract the $d''$-part of an $(n,n)$-form $\omega$ to get a measure, written as $\langle \omega, \mu \rangle$. A vector volume also canonically induces vector volumes on boundaries of half-spaces, and as such we have Stokes' and Green's formulae. 
+\subsubsection*{1.5: Integrating a $(p,n)$-form on $p$-dimensional subspace.} Given an abstract vector space $V$ of dimension $n$, the integration of a $(p,n)$-form with Borel coefficients (on an $p$-dimensional subspace of $V$) strongly depend on the choice of identification between $V$ and $\mathbf{R}^{\dim n}$. The fix to this is to specify a volume vector $\mu = (\lambda, O) \in |\Lambda^n V| \coloneqq \Lambda^n V \times^{\{\pm 1\}} \mathrm{Or}(V)$. This is equivalent to choosing an oriented coordinate system on $V$. Using a vector volume, one can constract the $d''$-part of an $(n,n)$-form $\omega$ to get a measure, written as $\langle \omega, \mu \rangle$. A vector volume also canonically induces vector volumes on boundaries of half-spaces, and as such we have Stokes' and Green's formulae. 
 
 
 \subsubsection*{1.6: Supercurrents.} The space of smooth, compactly supported $(p,q)$-forms on $V$ has a locally convex topology. The topological dual is the supercurrents of bimension $(p,q)$. Supercurrents have operators $d',d''$, positivity, Poincar\'{e} lemma for $(1,1)$-currents, and include superforms as a subspace. Moreover, if $f$ is continuous on $V$, then $d'd''f$ is positive iff $f$ is convex. By convolution, supercurrents can be computed as locally uniform limits of superforms. For any $f$ convex, by approximation the $(n,n)$-supercurrent $(d'd''f)^n$ is a positive measure on $V$, and is the same as the real MA measure $\MA(f)$. This can be inductively defined as $d'd''(f (d' d''f)^{k-1}).$ If $\phi$ is $C^2$, then \[\MA(\phi) = n!\det(\frac{\partial^2 \phi}{\partial x_i \partial x_j}) d'x_1 d''x_1 \cdots d'x_n \wedge d''x_n.\]
@@ -176,7 +176,7 @@ One can replace $C^\infty$ by other sheaves on $V$ and obtain superforms with di
 \end{proposition}
 
 \subsubsection*{1.8: Cells and polyhedrons.}
-Let $V, W$ be affine spaces, and $P \subseteq V$ a polyhedron. We say a map $f\colon P \to W$ is piecewise-linear (PL) if there is a locally finite family of cells $\{C_i\}$ in $V$ whose union is $P$, such that for all $i$, the restriction $f|_{C_i}$ is equal to the restriction of an affine map $V \to W$. Any subset $X \subseteq V$ is called a PL subspace if it is $G$-covered by the cells (usually defined) it contains. Any PL subspaces are locally closed, and the closed PL subspaces are polyhedra. All open subsets are PL subspaces. 
+Let $V, W$ be affine spaces, and $P \subseteq V$ a polyhedron. We say a map $f\colon P \to W$ is piecewise-linear (PL) if there is a locally finite family of cells $\{C_i\}$ in $V$ whose union is $P$, such that for all $i$, the restriction $f|_{C_i}$ can be realized as the restriction of an affine map $V \to W$. Any subset $X \subseteq V$ is called a PL subspace if it is $G$-covered by the cells (usually defined) it contains. Any PL subspaces are locally closed, and the closed PL subspaces are polyhedra. All open subsets are PL subspaces. 
 
 We define $G$-covering of subsets of a topological space, which are coverings by PL subspaces, and then define the tangent space to a point in a PL subspace of an affine space. This leads to a G-topology on $V$, which is denoted $V_G = (\mathrm{Dom}(V), \{G$-coverings$\})$, where $\mathrm{Dom}(V)$ consists of all PL subspaces of $V$. In particular, open subsets are PL and open coverings are G-coverings.
 
@@ -345,15 +345,20 @@ We define integrations
 
 Since by definition, the elementarily skeletal subsets (ESS) are PL subspaces, we can talk about their calibrations by Chapter 4. Definition 5.1.6 gives the notion of calibrated skeletal subsets purely of dimension $p$. Such subsets form a lattice. 
 
-\subsubsection*{5.2: Vertebrate $G$-tropical spaces.} Let $X$ be a $G$-tropical space with $d_{\mathrm{trop}} \leq n$, and let $f \colon V \to \mathbf{R}^n$ be a $G$-tropical chart of $X$. The subset $\Sigma_f^{(n)}$ is the collection of all $x \in V$ with $d_{\mathrm{trop},x}(f) = n$. This is closed (possibly empty) in $X$. If $X$ is chorded and all such $\Sigma_f^{(n)}$ are skeletal, then $XS$ is called a vertebrate $G$-tropical space. For example, PL spaces are vertebrate. A consequence is that, in a vertebrate $G$-tropical space, PL subspaces of pure dimensions are skeletal (see Proposition 5.2.6). The notion of (very) richness measures the amplitude of compact skeletal subsets of $X$. Later, the book will equip any separeted, pure-dimensional $k$-analytic spaces over any complete field non-archimedean field $k$ a vertebrate $G$-tropical structure, but the essential ingredients are already listed in Example 5.2.8. 
+\subsubsection*{5.2: Vertebrate $G$-tropical spaces.} Let $X$ be a $G$-tropical space with $d_{\mathrm{trop}} \leq n$, and let $f \colon V \to \mathbf{R}^n$ be a $G$-tropical chart of $X$. The subset $\Sigma_f^{(n)}$ is the collection of all $x \in V$ with $d_{\mathrm{trop},x}(f) = n$. This is closed (possibly empty) in $X$. If $X$ is chorded and all such $\Sigma_f^{(n)}$ are skeletal, then $X$ is called a vertebrate $G$-tropical space. For example, PL spaces are vertebrate. A consequence is that, in a vertebrate $G$-tropical space, PL subspaces of pure dimensions are skeletal (see Proposition 5.2.6). The notion of (very) richness measures the amplitude of compact skeletal subsets of $X$. Later, the book will equip any separeted, pure-dimensional $k$-analytic spaces over any complete field non-archimedean field $k$ a vertebrate $G$-tropical structure, but the essential ingredients are already listed in Example 5.2.8. 
 
-\subsubsection*{5.3: Strong support.}
+\subsubsection*{5.3: Strong support.} Let $X$ be a vertebrate $G$-tropical space of dimension $n$. Let $\omega$ be a $G$-form of type $(p,q)$ on $X$ where $\max(p,q) = n$. A closed skeletal subset $\Sigma$ of $X$ strongly supports $\omega$ if for any other closed skeletal subset $T$ containing $\Sigma$, the form $\omega|_T$ is $\omega|_{\Sigma}$ extend by zero. Strong support is $G$-local. If $\Sigma$ strongly supports $\omega$, then so does $\Sigma^{(n)}$. If $\omega$ is tropicalized by a $G$-tropical chart $f$, then $\Sigma_f^{(n)}$ already strongly supports $\omega$. In general, if $X$ is paracompact or $\omega$ is compactly supported, then there always exists some closed skeletal subset of $X$ that strongly supports $\omega$. If $\Sigma$ strongly supports $\omega$, then the support (see 3.2) of $\omega|_{\Sigma}$ equals to the support of $\omega$ on $X$. 
 
-\subsubsection*{5.4: Agreeable charts, tropical polyhedrons and cones.}
+\subsubsection*{5.4: Agreeable charts, tropical polyhedrons and cones.} Let $X$ be a vertebrate $G$-tropical space of dimension $n$, and $f \colon V \to E$ be a $G$-tropical chart. A subset $C \subseteq X$ is an $f$-cell if it is an $f$-cell of the PL subspace $\Sigma_f^{(n)}$. For example, if $f$ is homeomorphism onto its image, then the inverse images of $n$-dimensional cells in $f(V)$ are $f$-cells. Such $f$ is called agreeable if $f(\Sigma_f^{(n)})$ is PL in $E$ anad $f|_{\Sigma_f^{(n)}}$ is proper onto its image. It this is the case, let $\Pi_f$ denote the PL space $f(\Sigma_f^{(n)})$ and is called the tropical polyhedron of $f$. 
+
+Let $\mathcal{C}$ (resp. $\mathcal{C}'$, but possibly in a subset of $\Sigma_f^{(n)}$) be a cellular decomposition of $\Sigma_f^{(n)}$. Pick a point $x \in \Sigma_f^{(n)}$, and let $V$ (resp. $V')$ be the union of $n$-cells in $\mathcal{C}$ (resp. $\mathcal{C}'$) that contains $x$. By topological properties, the germs of the polyhedra $f(V)$ and $f(V')$ at $f(x)$ agree, which is a cone with vertex $f(x)$, is called a tropical cone at $f(x)$ and denoted by $\Pi_{f,x}$. 
+
+%This is a compact PL neighborhood of $x$. Moreover, $f|_V$ is a piecewise immersion of $V$ that maps each $C$ in the union to a strong cell in $E$. Pick any other open paracompact $W'$ that is a neighborhood of $x$, and let $\mathcal{C}'$ be a cellular decomposition of $\Sigma_f^{(n)} \cap W'$. Moreover, let $V'$ be the union of $n$-cells in $\mathcal{C}'$ that contains $x$. Then $V \cap V'$ is a compact PL neighborhood of $x$ in $V$. By topology, there exists a compact PL neighborhood $U$ of $f(x)$ with $f^{-1}(U) \subseteq V \cap V'$. That is to say, the polyhedra $f(V)$ and $f(V')$ agree in a neighborhood of $f(x)$.  
 
 \subsubsection*{5.5: Calibrated $G$-tropical spaces.}
+Let $X$ be a vertebrate $G$-tropical space of dimension $n$. It is calibrated if every skeletal subset $\Sigma$ of $X$ is equipped with a strictly positive vector volume $\mu_\Sigma$ that is stable under taking skeletal subsets. This recovers the calibration of PL spaces. The tropical cone $\Pi_{f,x}$ is canonically calibrated. 
 
-\subsubsection*{5.6: Volume forms on vertebrate $G$-tropical spaces.}
+\subsubsection*{5.6: Volume forms on vertebrate $G$-tropical spaces.} Let $p \leq n$ be integers, and $X$ is a calibrated $G$-tropical space. We say it is of level $n$ if $\dim{X} \leq n$. This section defines $p$-vector volumes on $X$. 
 
 \subsubsection*{5.7: Measures associated to $p$-dimensional volume forms.}
 
@@ -365,7 +370,9 @@ Since by definition, the elementarily skeletal subsets (ESS) are PL subspaces, w
 
 \subsubsection*{5.11: Stokes' and Green's formulae.}
 
+\subsection*{Chapter 7: Currents on $G$-tropical spaces}
 
+\subsubsection*{}
 
 
 \bibliographystyle{alpha}
