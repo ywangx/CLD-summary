@@ -127,6 +127,8 @@
 %\thanks{}
 
 \author[Ying Wang]{Ying Wang}
+\begin{abstract}This is my summary of the French monograph by Chambert-Loir--Ducros, which develops a local theory of pluripotential functions on analytic spaces. All errors are mine and corrections are always welcome. 
+\end{abstract}
 %\address{Department of Mathematics\\University of Michigan\\Ann Arbor, MI 48109-1043\\USA}
 
 %\subjclass[2020]{Primary }
@@ -281,7 +283,7 @@ For any PL space $X$ of dimension $n$, and fixed $G$-covering $\mathcal{C}$ of $
 
 If $\mathcal{M}$ is an $\mathcal{A}_{X_G}$-module annihilated by $\mathcal{I}_n$, such as $\mathcal{G}^{p,n}_G, \mathcal{G}^{n,p}_G$ for $p \leq n$, then for any PL subspace $Y \subseteq X$, let $\{\pm1\}$ act on $\mathcal{M}$ by multiplication by $\pm 1$. Then for any fixed $\epsilon \in \mathrm{Or}_G(Y)$, we have a bijection \[\mathcal{M}(Y) \to \mathcal{M}\times_{\{\pm 1\}} \mathrm{Or}_{X_G}(Y), m \mapsto (m,\epsilon).\]
 \begin{center}
-    \includegraphics[width = 0.5\textwidth]{4.1.png}
+    \includegraphics[width = 0.5\textwidth]{4.1.jpeg}
 \end{center}
 
 \subsubsection*{4.3: Volume forms on PL spaces}
@@ -320,7 +322,7 @@ tensored with $\mathcal{G}^{n,0}_{X_G}$ gives us a map\footnote{This is because 
 \subsubsection*{4.6: Calibration and integration of $(n-1,n)$-forms.}
 Let $X$ be a PL space of dimension $n$ with a cell decomposition $\mathcal{C}$, and $\mu \in \Gamma(\mathrm{Cali}_X)$. Let $C \in \mathcal{C}$ be an $n$-dimensional cell, with $F < C$ be an $(n-1)$-dimensional cell. For any $(n-1,n)$-form $\omega$, we can define an $(n-1,n)$-form on $F$ with respect to the structure $F < C$, denoted $\langle \omega, \mu \rangle |_{(F,C)}$. Further, there exists a unique $n-1$-form $\langle \omega, \mu\rangle_{\mathcal{C}}$ on the union of all $(n-1)$-cells of $\mathcal{C}$ such that for any $(n-1)$-cell $F$, the following is satisfied: 
 \[\langle \omega, \mu \rangle_{\mathcal{C}} |_F = \sum_{C \supseteq F, C \in \mathcal{C}_n} \langle \omega, \mu \rangle|_{\langle F, C \rangle}.\]
-Here $\mathcal{C}_n \subseteq \mathcal{C}$ is the collection of all $n$-dimensional cells. It turns out that this form is actually independent of the choice of the decomposition $\mathcal{C}$, and therefore is simply denoted as $\langle \omega, \mu \rangle$, an $(n-1)$-form on $X$. This construction again satisfies a version of the projection formula, and moreover if there is a locally finite $G$-covering of $X$, there is an inclusion-exclusion formula for the calculation of this form. 
+Here $\mathcal{C}_n \subseteq \mathcal{C}$ is the collection of all $n$-dimensional cells. It turns out that this form is actually independent of the choice of the decomposition $\mathcal{C}$, and therefore is simply denoted as $\langle \omega, \mu \rangle$, an $(n-1)$-form on $X$. This construction again satisfies a version of the projection formula, and moreover given any locally finite $G$-covering of $X$, there is an inclusion-exclusion formula for the calculation of this form. 
 
 We define integrations
 \begin{align*}
@@ -337,10 +339,31 @@ We define integrations
     \[\int_X \langle \alpha \wedge d'd''\beta - d'd''\alpha \wedge \beta, \mu \rangle = \int_{\partial X} \langle \alpha \wedge d'' \beta - d'' \alpha \wedge \beta, \mu \rangle. \]
 \end{theorem}
 
+\subsection*{Chapter 5: Calibrated $G$-tropical spaces}
 
+\subsubsection*{5.1: Chorded $G$-tropical spaces.} Given a $G$-tropical space $X$, the intersection of two closed PL subspaces is not necessarily PL. To avoid this issue, we need to single out a paricular collection $\mathcal{S}$ of PL subspaces of $X$ and of any $V \in \mathrm{Dom}(X)$ that are stable under finite unions and intersections. Elements in $\mathcal{S}$ are called elementarily skeletal subsets, and $(X, \mathcal{S})$ is a chorded $G$-tropical space. Subsets of $X$ that are $G$-locally elementarily skeletal are call skeletal. For any point $x \in X$ that lie in some skeletal subset, we say $x$ is skeletal. If $X$ is a PL space, then one can simply take all PL subspaces are skeletal subsets. 
 
+Since by definition, the elementarily skeletal subsets (ESS) are PL subspaces, we can talk about their calibrations by Chapter 4. Definition 5.1.6 gives the notion of calibrated skeletal subsets purely of dimension $p$. Such subsets form a lattice. 
 
+\subsubsection*{5.2: Vertebrate $G$-tropical spaces.} Let $X$ be a $G$-tropical space with $d_{\mathrm{trop}} \leq n$, and let $f \colon V \to \mathbf{R}^n$ be a $G$-tropical chart of $X$. The subset $\Sigma_f^{(n)}$ is the collection of all $x \in V$ with $d_{\mathrm{trop},x}(f) = n$. This is closed (possibly empty) in $X$. If $X$ is chorded and all such $\Sigma_f^{(n)}$ are skeletal, then $XS$ is called a vertebrate $G$-tropical space. For example, PL spaces are vertebrate. A consequence is that, in a vertebrate $G$-tropical space, PL subspaces of pure dimensions are skeletal (see Proposition 5.2.6). The notion of (very) richness measures the amplitude of compact skeletal subsets of $X$. Later, the book will equip any separeted, pure-dimensional $k$-analytic spaces over any complete field non-archimedean field $k$ a vertebrate $G$-tropical structure, but the essential ingredients are already listed in Example 5.2.8. 
 
+\subsubsection*{5.3: Strong support.}
+
+\subsubsection*{5.4: Agreeable charts, tropical polyhedrons and cones.}
+
+\subsubsection*{5.5: Calibrated $G$-tropical spaces.}
+
+\subsubsection*{5.6: Volume forms on vertebrate $G$-tropical spaces.}
+
+\subsubsection*{5.7: Measures associated to $p$-dimensional volume forms.}
+
+\subsubsection*{5.8: Integration of differential forms.}
+
+\subsubsection*{5.9: Boundary measure.}
+
+\subsubsection*{5.10: Integrals and tropicalizations.}
+
+\subsubsection*{5.11: Stokes' and Green's formulae.}
 
 
 
