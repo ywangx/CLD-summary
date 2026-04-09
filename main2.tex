@@ -127,7 +127,7 @@
 %\thanks{}
 
 \author[Ying Wang]{Ying Wang}
-\begin{abstract}This is my summary of the French monograph by Chambert-Loir--Ducros, which develops a local theory of pluripotential functions on analytic spaces. All errors are mine and corrections are always welcome. 
+\begin{abstract}This is my summary of the French monograph by Chambert-Loir--Ducros, which in particular develops a local theory of pluripotential functions on analytic spaces. All errors are mine and any corrections are welcome. 
 \end{abstract}
 %\address{Department of Mathematics\\University of Michigan\\Ann Arbor, MI 48109-1043\\USA}
 
@@ -305,11 +305,11 @@ We get a map of $G$-sheaves $|\mathcal{B}_{X_G}^{n,0}| \to \mathrm{Meas}_{\mathr
     \item Glue to get a $G$-sheaf of Borel measures on $X$. 
 \end{itemize}
 
-If $\alpha^{\sharp} \in L^1_{\mathrm{loc}}$, then we can define a Radon measure $\omega_{\mathrm{Rad}}$ whose total variation equals $\omega_{\mathrm{Bor}}$. The construction of Borel measures commutes with pullback maps on cells. For piecewise immersions $f$, we have $(f_*\alpha)_{\mathrm{Bor}} \leq f_*(\alpha_{\mathrm{Bor}}).$
+If $\alpha^{\sharp} \in L^1_{\mathrm{loc}}$, then we can define a Radon measure $\omega_{\mathrm{Rad}}$ whose total variation equals $\omega_{\mathrm{Bor}}$. The construction of Borel measures commutes with pullback maps on cells. For a piecewise immersion $f$, we have $(f_*\alpha)_{\mathrm{Bor}} \leq f_*(\alpha_{\mathrm{Bor}}).$
 
 
 \subsubsection*{4.5: Calibration and integration of $(n,n)$-forms.}
-The idea of integration an $(n,n)$-form on an $n$-dimensional PL space is to contract the $(0,n)$-part using a volume vector, and identify the $(n,0)$-part with the usual de Rham $n$-forms. Formally, we introduce the sheaf of calibrations on $X$, given by \[\mathrm{Cali}_X \coloneqq \mathcal{H}om_{X_G}(|\mathcal{G}^{n,0}_{X_G}|, \mathcal{G}_{X_G} / \mathcal{I}_n \mathcal{G}_{X_G}),\] which is $G$-locally of rank $1$ over $\mathcal{G}_{X_G} / \mathcal{I}_n \mathcal{G}_{X_G}$. For any PL cell $Y$ of dimension $n$, the following commutative diagram 
+The idea of integrating an $(n,n)$-form on an $n$-dimensional PL space is to contract the $(0,n)$-part using a volume vector, and identify the $(n,0)$-part with the usual de Rham $n$-forms. Formally, we introduce the sheaf of calibrations on $X$, given by \[\mathrm{Cali}_X \coloneqq \mathcal{H}om_{X_G}(|\mathcal{G}^{n,0}_{X_G}|, \mathcal{G}_{X_G} / \mathcal{I}_n \mathcal{G}_{X_G}),\] which is $G$-locally of rank $1$ over $\mathcal{G}_{X_G} / \mathcal{I}_n \mathcal{G}_{X_G}$. For any PL cell $Y$ of dimension $n$, the following commutative diagram 
 
 \begin{center}
 \begin{tikzcd}
@@ -340,38 +340,65 @@ We define integrations
 \end{theorem}
 
 \subsection*{Chapter 5: Calibrated $G$-tropical spaces}
+\subsubsection*{5.1: Chorded $G$-tropical spaces.} Given a $G$-tropical space $X$, the intersection of two closed PL subspaces is not necessarily PL. To avoid this issue, we need to single out a paricular collection $\mathcal{S}$ of PL subspaces of $X$ and of any $V \in \mathrm{Dom}(X)$ that are stable under finite unions and intersections. Elements in $\mathcal{S}$ are called elementarily skeletal subsets, and $(X, \mathcal{S})$ is a \emph{chorded $G$-tropical space}. Subsets of $X$ that are $G$-locally elementarily skeletal are called \emph{skeletal}. For any point $x \in X$ that lie in some skeletal subset, we say $x$ is \emph{skeletal}. If $X$ is a PL space, then one can simply take all PL subspaces are skeletal subsets. 
 
-\subsubsection*{5.1: Chorded $G$-tropical spaces.} Given a $G$-tropical space $X$, the intersection of two closed PL subspaces is not necessarily PL. To avoid this issue, we need to single out a paricular collection $\mathcal{S}$ of PL subspaces of $X$ and of any $V \in \mathrm{Dom}(X)$ that are stable under finite unions and intersections. Elements in $\mathcal{S}$ are called elementarily skeletal subsets, and $(X, \mathcal{S})$ is a chorded $G$-tropical space. Subsets of $X$ that are $G$-locally elementarily skeletal are call skeletal. For any point $x \in X$ that lie in some skeletal subset, we say $x$ is skeletal. If $X$ is a PL space, then one can simply take all PL subspaces are skeletal subsets. 
+Since by definition, the elementarily skeletal subsets (ESS) are PL subspaces, we can talk about their calibrations by Chapter 4. Definition 5.1.6 gives the notion of \emph{calibrated skeletal subsets purely of dimension $p$}. Such subsets form a lattice. 
 
-Since by definition, the elementarily skeletal subsets (ESS) are PL subspaces, we can talk about their calibrations by Chapter 4. Definition 5.1.6 gives the notion of calibrated skeletal subsets purely of dimension $p$. Such subsets form a lattice. 
+\subsubsection*{5.2: Vertebrate $G$-tropical spaces.} Let $X$ be a $G$-tropical space with $d_{\mathrm{trop}} \leq n$, and let $f \colon V \to \mathbf{R}^n$ be a $G$-tropical chart of $X$. The subset $\Sigma_f^{(n)}$ is the collection of all $x \in V$ with $d_{\mathrm{trop},x}(f) = n$. This is closed (possibly empty) in $X$. If $X$ is chorded and all such $\Sigma_f^{(n)}$ are skeletal, then $X$ is called a \emph{vertebrate $G$-tropical space}. For example, PL spaces are vertebrate. A consequence of this definition is that, in a vertebrate $G$-tropical space, PL subspaces of pure dimension are skeletal (see Proposition 5.2.6). The notion of \emph{(very) richness} measures the amplitude of compact skeletal subsets of $X$. Later, the book will equip any separeted, pure-dimensional $k$-analytic spaces over any complete field non-archimedean field $k$ with a vertebrate $G$-tropical structure, but the essential ingredients are already listed in Example 5.2.8. 
 
-\subsubsection*{5.2: Vertebrate $G$-tropical spaces.} Let $X$ be a $G$-tropical space with $d_{\mathrm{trop}} \leq n$, and let $f \colon V \to \mathbf{R}^n$ be a $G$-tropical chart of $X$. The subset $\Sigma_f^{(n)}$ is the collection of all $x \in V$ with $d_{\mathrm{trop},x}(f) = n$. This is closed (possibly empty) in $X$. If $X$ is chorded and all such $\Sigma_f^{(n)}$ are skeletal, then $X$ is called a vertebrate $G$-tropical space. For example, PL spaces are vertebrate. A consequence is that, in a vertebrate $G$-tropical space, PL subspaces of pure dimensions are skeletal (see Proposition 5.2.6). The notion of (very) richness measures the amplitude of compact skeletal subsets of $X$. Later, the book will equip any separeted, pure-dimensional $k$-analytic spaces over any complete field non-archimedean field $k$ a vertebrate $G$-tropical structure, but the essential ingredients are already listed in Example 5.2.8. 
+\subsubsection*{5.3: Strong support.} Let $X$ be a vertebrate $G$-tropical space of dimension $n$. Let $\omega$ be a $G$-form of type $(p,q)$ on $X$ where $\max(p,q) = n$. A closed skeletal subset $\Sigma$ of $X$ \emph{strongly supports} $\omega$ if for any other closed skeletal subset $T$ containing $\Sigma$, the form $\omega|_T$ is $\omega|_{\Sigma}$ extend by zero. Strong support is $G$-local. If $\Sigma$ strongly supports $\omega$, then so does $\Sigma^{(n)}$. If $\omega$ is tropicalized by a $G$-tropical chart $f$, then $\Sigma_f^{(n)}$ already strongly supports $\omega$. In general, if $X$ is paracompact or $\omega$ is compactly supported, then there always exists some closed skeletal subset of $X$ that strongly supports $\omega$. If $\Sigma$ strongly supports $\omega$, then the support (see 3.2) of $\omega|_{\Sigma}$ equals to the support of $\omega$ on $X$. 
 
-\subsubsection*{5.3: Strong support.} Let $X$ be a vertebrate $G$-tropical space of dimension $n$. Let $\omega$ be a $G$-form of type $(p,q)$ on $X$ where $\max(p,q) = n$. A closed skeletal subset $\Sigma$ of $X$ strongly supports $\omega$ if for any other closed skeletal subset $T$ containing $\Sigma$, the form $\omega|_T$ is $\omega|_{\Sigma}$ extend by zero. Strong support is $G$-local. If $\Sigma$ strongly supports $\omega$, then so does $\Sigma^{(n)}$. If $\omega$ is tropicalized by a $G$-tropical chart $f$, then $\Sigma_f^{(n)}$ already strongly supports $\omega$. In general, if $X$ is paracompact or $\omega$ is compactly supported, then there always exists some closed skeletal subset of $X$ that strongly supports $\omega$. If $\Sigma$ strongly supports $\omega$, then the support (see 3.2) of $\omega|_{\Sigma}$ equals to the support of $\omega$ on $X$. 
+\subsubsection*{5.4: Agreeable charts, tropical polyhedrons and cones.} Let $X$ be a vertebrate $G$-tropical space of dimension $n$, and $f \colon V \to E$ be a $G$-tropical chart. A subset $C \subseteq X$ is an \emph{$f$-cell} if it is an $f$-cell of the PL subspace $\Sigma_f^{(n)}$. For example, if $f$ is homeomorphism onto its image, then the inverse images of $n$-dimensional cells in $f(V)$ are $f$-cells. Such $f$ is called \emph{agreeable} if $f(\Sigma_f^{(n)})$ is PL in $E$ anad $f|_{\Sigma_f^{(n)}}$ is proper onto its image. It this is the case, let $\Pi_f$ denote the PL space $f(\Sigma_f^{(n)})$ and call it the \emph{tropical polyhedron of $f$}. 
 
-\subsubsection*{5.4: Agreeable charts, tropical polyhedrons and cones.} Let $X$ be a vertebrate $G$-tropical space of dimension $n$, and $f \colon V \to E$ be a $G$-tropical chart. A subset $C \subseteq X$ is an $f$-cell if it is an $f$-cell of the PL subspace $\Sigma_f^{(n)}$. For example, if $f$ is homeomorphism onto its image, then the inverse images of $n$-dimensional cells in $f(V)$ are $f$-cells. Such $f$ is called agreeable if $f(\Sigma_f^{(n)})$ is PL in $E$ anad $f|_{\Sigma_f^{(n)}}$ is proper onto its image. It this is the case, let $\Pi_f$ denote the PL space $f(\Sigma_f^{(n)})$ and is called the tropical polyhedron of $f$. 
-
-Let $\mathcal{C}$ (resp. $\mathcal{C}'$, but possibly in a subset of $\Sigma_f^{(n)}$) be a cellular decomposition of $\Sigma_f^{(n)}$. Pick a point $x \in \Sigma_f^{(n)}$, and let $V$ (resp. $V')$ be the union of $n$-cells in $\mathcal{C}$ (resp. $\mathcal{C}'$) that contains $x$. By topological properties, the germs of the polyhedra $f(V)$ and $f(V')$ at $f(x)$ agree, which is a cone with vertex $f(x)$, is called a tropical cone at $f(x)$ and denoted by $\Pi_{f,x}$. 
+Let $\mathcal{C}$ (resp. $\mathcal{C}'$, but possibly in a subset $\Sigma'$ of $\Sigma_f^{(n)}$) be a cellular decomposition of $\Sigma_f^{(n)}$ (resp. $\Sigma'$). Pick a point $x \in \Sigma_f^{(n)}$, and let $V$ (resp. $V')$ be the union of $n$-cells in $\mathcal{C}$ (resp. $\mathcal{C}'$) that contains $x$. By topological properties, the germs of the polyhedra $f(V)$ and $f(V')$ at $f(x)$ agree, which is a cone with vertex $f(x)$, and is called a \emph{tropical cone at $f(x)$} and denoted by $\Pi_{f,x}$. 
 
 %This is a compact PL neighborhood of $x$. Moreover, $f|_V$ is a piecewise immersion of $V$ that maps each $C$ in the union to a strong cell in $E$. Pick any other open paracompact $W'$ that is a neighborhood of $x$, and let $\mathcal{C}'$ be a cellular decomposition of $\Sigma_f^{(n)} \cap W'$. Moreover, let $V'$ be the union of $n$-cells in $\mathcal{C}'$ that contains $x$. Then $V \cap V'$ is a compact PL neighborhood of $x$ in $V$. By topology, there exists a compact PL neighborhood $U$ of $f(x)$ with $f^{-1}(U) \subseteq V \cap V'$. That is to say, the polyhedra $f(V)$ and $f(V')$ agree in a neighborhood of $f(x)$.  
 
 \subsubsection*{5.5: Calibrated $G$-tropical spaces.}
-Let $X$ be a vertebrate $G$-tropical space of dimension $n$. It is calibrated if every skeletal subset $\Sigma$ of $X$ is equipped with a strictly positive vector volume $\mu_\Sigma$ that is stable under taking skeletal subsets. This recovers the calibration of PL spaces. The tropical cone $\Pi_{f,x}$ is canonically calibrated. 
+Let $X$ be a vertebrate $G$-tropical space of dimension $n$. It is \emph{calibrated} if every skeletal subset $\Sigma$ of $X$ is equipped with a strictly positive vector volume $\mu_\Sigma$ that is stable under taking skeletal subsets. This recovers the calibration of PL spaces. The tropical cone $\Pi_{f,x}$ is canonically calibrated. 
 
-\subsubsection*{5.6: Volume forms on vertebrate $G$-tropical spaces.} Let $p \leq n$ be integers, and $X$ is a calibrated $G$-tropical space. We say it is of level $n$ if $\dim{X} \leq n$. This section defines $p$-vector volumes on $X$. 
+\subsubsection*{5.6: Volume forms on vertebrate $G$-tropical spaces.} Let $p \leq n$ be integers, and $X$ is a calibrated $G$-tropical space. We say it is \emph{of level $n$} if $\dim{X} \leq n$. This section defines a sheaf $p$-dimensional vector volumes on $X$, whose sections are Lebesgue-type measures supported on skeletal subsets of dimension at most $p$. This is first defined on all skeletal subsets and then a $G$-sheaf, denoted $\mathcal{V}_{X_G}^{\mathcal{F}, p}$, where $\mathcal{F}$ is the coefficient sheaf. If $Y$ is a paracompact domain of $X$, then for any $\lambda \in \mathcal{V}_{X_G}^{\mathcal{F}, p}$, there exists a closed skeletal subset $\Sigma \subseteq Y$ of dimension $\leq p$ and a $p$-volume form $\lambda_{\Sigma}$ on $\Sigma$ that defines $\lambda$. One can also define positive $p$-volume forms. 
 
 \subsubsection*{5.7: Measures associated to $p$-dimensional volume forms.}
+Let $X$ be a calibrated $G$-tropical space of level $n$. For any $p$-volume form $\lambda$ with Borelien coefficients, there is a unique assignment $\lambda \mapsto \lambda_{\mathrm{Bor}}$, a Borel measure on $X_G$, such that for any domain $Y \subseteq X$ and any closed skeletal subset $\Sigma \subseteq Y$, the restriction of this assignment restores that in 4.4. For any function $u \colon X \to \mathbf{R} \cup \{\pm \infty\}$, by working with all skeletal subsets, we can define the notion of \emph{local integrability.} This is a $G$-local property. By using all Lebesgue-type measures on skeletal subsets, we can define the notion of \emph{negligible subsets of $X$}. This is also $G$-local. This allows us to define properties that hold \emph{almost everywhere} on $X$. 
 
 \subsubsection*{5.8: Integration of differential forms.}
+Let $X$ be a calibrated $G$-tropical space of level $n$. For any $\omega \in \mathcal{F}^{n,n}_{X_G}(X)$ with strong support $\Sigma$ (which has a calibration $\mu_\Sigma$), the $n$-vector form $\langle \omega|_{\Sigma}, \mu_{\Sigma}|_\Sigma \rangle$ on $X$ doesn't depend on the choice of $\Sigma$, and is denoted $\widetilde{\omega}$. If $\omega$ is tropicalized by some agreeable $G$-tropical chart $f \colon X \to E$, then the $n$-vector form and its pushforward to $E$ are related by a projection formula. We can define the notion of \emph{$(p,q)$-forms with locally integrable coefficients}. 
 
-\subsubsection*{5.9: Boundary measure.}
+\subsubsection*{5.9: Boundary measure.} This section concerns $(n-1,n)$-type forms $\omega$. FOr any closed skeletal subset $\Sigma$ that strongly supports $\omega$, the restriction $\omega|_{\Sigma^{(n)}}$ is an $(n-1)$-vector volume on $X$ and is independent of choice of $\Sigma$. 
 
-\subsubsection*{5.10: Integrals and tropicalizations.}
+\subsubsection*{5.10: Integrals and tropicalizations.} Let us be given an agreeable $G$-tropical chart $f \colon X \to E$, the tropical polyhedron $\Pi_f$ and the calibration $\mu_{\Pi_f}$. Let $\omega$ be an $(n-1, n)$ or $(n,n)$-Borelian form defined in a neighborhood of $f(X)$. This sections discusses the relation between the two Borel measures on $\Pi_f$ 
+\[f_{\mathrm{trop},*}(f^*\alpha)_{\mathrm{Bor}} \text{\,\,\,\,  and  \,\,\,\,} \langle \alpha, \mu_{\Pi_f}\rangle_{\mathrm{Bor}}, \] and between the two integrals \[\int_X f^* \alpha \text{\,\,\,\,  and  \,\,\,\,} \int_{\Pi_f} \langle \alpha, \mu_{\Pi_f}\rangle.\]
 
-\subsubsection*{5.11: Stokes' and Green's formulae.}
+\subsubsection*{5.11: Stokes' and Green's formulae. }
+This section generalizes formulae in 4.4 to all calibrated $G$-tropical spaces. 
+
+\subsection*{Chapter 6: Tropical Spaces}
+\subsubsection*{6.1: Affine $G$-tropical spaces.} Let $X$ be a $G$-tropical space. It is endowed with another sub-presheaf $\mathrm{L}_X$ of $\mathbf{Q}$-vector spaces of the $G$-sheaf $\mathrm{PL}_X$, whose sections are called \emph{the affine functions on $X$}. Any PL function $f$ on any domain $V \subseteq X$ is affine iff it is locally affine (not just in the $G$-topology). Moreover, a function $f$ on $V$ is PL iff it is $G$-locally affine. There are two main examples: 
+
+\begin{enumerate}
+    \item when $X$ is the PL subspace of an affine space $E$, then for any $U \subseteq X$ PL subspace, the sections $\mathrm{L}_X(U)$ are functions that are locally restrictions of affine functions on $E$. 
+    \item on a Berkovich analytic space $X$, the affine functions are $r \log|f| + c$ where $r \in \mathbf{Q}, c \in \mathbf{R}$, and $f$ is any invertible analytic function. 
+\end{enumerate}
+
+A PL map of affine $G$-tropical spaces is affine if it preserves affine functions. The affine functions endow $X$ with a refined affine structure. 
+
+\subsubsection*{6.2: Smooth forms on affine $G$-tropical spaces. }
+For general $G$-tropical spaces, we say a $G$-form $\omega$ with coefficients in $\mathcal{G}$ and defined on a domain $V$ is a \emph{form} if at each point $x \in V$, there is an open neighborhood $U$ of $x$ in the usual topology such that $\omega|_U$ is tropicalized. 
+
+If $X$ is an affine $G$-tropical space, we particularly take $\mathcal{G}$ to be the class of smooth functions, and we will use the affine functions to work in the usual topology, instead of the $G$-topology. We can define notions of separability on $X$. A stronger version is affine separability, and a weaker version is differential separability. However, if (paracompact) $X$ is affine, and differentially separable, then it enjoys a lot of properties of manifolds, including Stone-Weierstrass, smooth partition of unity, and the sheaves $\mathcal{A}^{p,q}_X$ (in the usual topology) of smooth forms are fine sheaves. 
+
+\subsubsection*{6.3: Local description of $G$-local objects}
+\subsubsection*{6.4: Topologies on the space of smooth forms}
+\subsubsection*{6.5: Positive forms.}
+\subsubsection*{6.6: Tropical spaces.}
+\subsubsection*{6.7: Examples.}
+
+
+
+
 
 \subsection*{Chapter 7: Currents on $G$-tropical spaces}
-
 \subsubsection*{}
 
 
