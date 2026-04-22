@@ -127,7 +127,7 @@
 %\thanks{}
 
 \author[Ying Wang]{Ying Wang}
-\begin{abstract}This is my summary of the French monograph by Chambert-Loir--Ducros, which in particular develops a local theory of pluripotential functions on analytic spaces. All errors are mine and any corrections are welcome. 
+\begin{abstract}This is a summary of the French monograph by \cite{CLD25}, which in particular develops a local theory of pluripotential functions on analytic spaces. All errors are mine and corrections are welcome. 
 \end{abstract}
 %\address{Department of Mathematics\\University of Michigan\\Ann Arbor, MI 48109-1043\\USA}
 
@@ -146,41 +146,41 @@
 
 \section*{Part 1: Tropical Geometry}
 
-\subsection*{Chapter 1: Superforms on Real Vector Spaces}
+\section*{Chapter 1: Superforms on Real Vector Spaces}
 
-\subsubsection*{1.1-1.2: Superforms.}
+\subsection*{1.1-1.2: Superforms.}
 Let $V$ be a real vector space of dimension $n < \infty$. For any $0 \leq p, q \leq n$, the space of $(p,q)$-(super)forms on $V$ is denoted by $A^{p,q}$. These are forms with real coefficients, and have various positivity notions.
 
 \begin{remark}
     We will often omit the prefix super. 
 \end{remark}
 
-\subsubsection*{1.3-4: Superforms with coefficients.}
+\subsection*{1.3-4: Superforms with coefficients.}
 For any $U \subseteq V$ open, the differential superforms of type $(p,q)$ is $\mathscr{A}^{p,q}_V(U) = C^\infty(U) \otimes_{\mathbf{R}} A^{p,q}(V).$ They form a graded algebra and has a natural ($\pm 1$)-involution $J$, giving rise the definition of symmetric forms. There are two differentials $d', d''$ on these differential superforms. Under the tropicalizatio map $(\mathbf{C}^\ast)^n \to V$ by $z_i \mapsto \log|z_i| = x_i$, the form $d'x_i$ correspond to $d\log|z_i|$ and $d''x_i$ correspond to $d\mathrm{arg}(z_i)$. 
 
 One can replace $C^\infty$ by other sheaves on $V$ and obtain superforms with different coefficients. 
 
-\subsubsection*{1.5: Integrating a $(p,n)$-form on $p$-dimensional subspace.} Given an abstract vector space $V$ of dimension $n$, the integration of a $(p,n)$-form with Borel coefficients (on an $p$-dimensional subspace of $V$) strongly depend on the choice of identification between $V$ and $\mathbf{R}^{\dim n}$. The fix to this is to specify a volume vector $\mu = (\lambda, O) \in |\Lambda^n V| \coloneqq \Lambda^n V \times^{\{\pm 1\}} \mathrm{Or}(V)$. This is equivalent to choosing an oriented coordinate system on $V$. Using a vector volume, one can constract the $d''$-part of an $(n,n)$-form $\omega$ to get a measure, written as $\langle \omega, \mu \rangle$. A vector volume also canonically induces vector volumes on boundaries of half-spaces, and as such we have Stokes' and Green's formulae. 
+\subsection*{1.5: Integrating a $(p,n)$-form on $p$-dimensional subspace.} Given an abstract vector space $V$ of dimension $n$, the integration of a $(p,n)$-form with Borel coefficients (on an $p$-dimensional subspace of $V$) strongly depend on the choice of identification between $V$ and $\mathbf{R}^{\dim n}$. The fix to this is to specify a volume vector $\mu = (\lambda, O) \in |\Lambda^n V| \coloneqq \Lambda^n V \times^{\{\pm 1\}} \mathrm{Or}(V)$. This is equivalent to choosing an oriented coordinate system on $V$. Using a vector volume, one can constract the $d''$-part of an $(n,n)$-form $\omega$ to get a measure, written as $\langle \omega, \mu \rangle$. A vector volume also canonically induces vector volumes on boundaries of half-spaces, and as such we have Stokes' and Green's formulae. 
 
 
-\subsubsection*{1.6: Supercurrents.} The space of smooth, compactly supported $(p,q)$-forms on $V$ has a locally convex topology. The topological dual is the supercurrents of bimension $(p,q)$. Supercurrents have operators $d',d''$, positivity, Poincar\'{e} lemma for $(1,1)$-currents, and include superforms as a subspace. Moreover, if $f$ is continuous on $V$, then $d'd''f$ is positive iff $f$ is convex. By convolution, supercurrents can be computed as locally uniform limits of superforms. For any $f$ convex, by approximation the $(n,n)$-supercurrent $(d'd''f)^n$ is a positive measure on $V$, and is the same as the real MA measure $\MA(f)$. This can be inductively defined as $d'd''(f (d' d''f)^{k-1}).$ If $\phi$ is $C^2$, then \[\MA(\phi) = n!\det(\frac{\partial^2 \phi}{\partial x_i \partial x_j}) d'x_1 d''x_1 \cdots d'x_n \wedge d''x_n.\]
+\subsection*{1.6: Supercurrents.} The space of smooth, compactly supported $(p,q)$-forms on $V$ has a locally convex topology. The topological dual is the supercurrents of bimension $(p,q)$. Supercurrents have operators $d',d''$, positivity, Poincar\'{e} lemma for $(1,1)$-currents, and include superforms as a subspace. Moreover, if $f$ is continuous on $V$, then $d'd''f$ is positive iff $f$ is convex. By convolution, supercurrents can be computed as locally uniform limits of superforms. For any $f$ convex, by approximation the $(n,n)$-supercurrent $(d'd''f)^n$ is a positive measure on $V$, and is the same as the real MA measure $\MA(f)$. This can be inductively defined as $d'd''(f (d' d''f)^{k-1}).$ If $\phi$ is $C^2$, then \[\MA(\phi) = n!\det(\frac{\partial^2 \phi}{\partial x_i \partial x_j}) d'x_1 d''x_1 \cdots d'x_n \wedge d''x_n.\]
 
 \begin{remark}
     $(1,1)$-supercurrents are closely related to tropical geometry. For example, for a tropical polynomial $g = \max\{$affine functionals $f_i \}$, we have $d'd''g = \sum_k [V(f_i)] \wedge d''v_i$, where $v_i$ is a weighted normal to $V(f_i)$. It is a closed positive current with $(n-1)$-dimensional support iff the balancing condition for $\mathrm{trop}(g)$ holds. See \cite{Lag12} \S 5 for details. 
 \end{remark}
 
-\subsubsection*{1.7: Calculations of MA operator.} A collection of affine functionals $\{f_i\}_1^m$ on $V$ is very separating if the induced map $(f_i - f_j)_i \colon V \to \mathbf{R}^m$ is injective for some (and hence any) fixed $1 \leq j \leq m$. The following proposition shows that the MA operator is related to intersection theory. 
+\subsection*{1.7: Calculations of MA operator.} A collection of affine functionals $\{f_i\}_1^m$ on $V$ is very separating if the induced map $(f_i - f_j)_i \colon V \to \mathbf{R}^m$ is injective for some (and hence any) fixed $1 \leq j \leq m$. The following proposition shows that the MA operator is related to intersection theory. 
 
 \begin{proposition}
     Let $V$ be a real vector space of dimension $n$ ,and $(f_1, \cdots, f_m)$ be a family of affine functions on $V$. Let $g = \max_j f_j$. For any $x \in V$, let $I_x \coloneqq \{i \in [m] \colon f_i = g\}$. Let $S$ be the set of $x \in X$ such that $I_x$ is very separating. Then $S$ is finite, and we can calculate $(d'd''g)^n = \sum_{x \in S} \lambda_x \delta_x$ where $\lambda_x > 0$ for any $x \in S$. 
 \end{proposition}
 
-\subsubsection*{1.8: Cells and polyhedrons.}
+\subsection*{1.8: Cells and polyhedrons.}
 Let $V, W$ be affine spaces, and $P \subseteq V$ a polyhedron. We say a map $f\colon P \to W$ is piecewise-linear (PL) if there is a locally finite family of cells $\{C_i\}$ in $V$ whose union is $P$, such that for all $i$, the restriction $f|_{C_i}$ can be realized as the restriction of an affine map $V \to W$. Any subset $X \subseteq V$ is called a PL subspace if it is $G$-covered by the cells (usually defined) it contains. Any PL subspaces are locally closed, and the closed PL subspaces are polyhedra. All open subsets are PL subspaces. 
 
 We define $G$-covering of subsets of a topological space, which are coverings by PL subspaces, and then define the tangent space to a point in a PL subspace of an affine space. This leads to a G-topology on $V$, which is denoted $V_G = (\mathrm{Dom}(V), \{G$-coverings$\})$, where $\mathrm{Dom}(V)$ consists of all PL subspaces of $V$. In particular, open subsets are PL and open coverings are G-coverings.
 
-\subsubsection*{1.9: Differential forms on a PL subspace.} Let $V$ be an affine space, $U$ any open, $C$ any cell in $U$, and $P$ any PL subsapce in $U$. For any form $\omega \in \mathcal{F}^{p,q}(U)$, we define the meaning of $\omega|_C = 0$, and thereby $\omega|_P = 0$.
+\subsection*{1.9: Differential forms on a PL subspace.} Let $V$ be an affine space, $U$ any open, $C$ any cell in $U$, and $P$ any PL subsapce in $U$. For any form $\omega \in \mathcal{F}^{p,q}(U)$, we define the meaning of $\omega|_C = 0$, and thereby $\omega|_P = 0$.
 
 The zeroness is $G$-local under any PL coverings. There is a sub-sheaf $\mathcal{N}_P^{p,q}$ of zero forms on $P$. Let $j \colon P \hookrightarrow V$ be the embedding, and we define $\mathcal{F}_P^{p,q} \coloneq j^{-1}(\mathcal{F}^{p,q}_V / \mathcal{F}^{p,q}_V \cap \mathcal{N}_P^{p,q}))$. We can analogously define the sheaves in the G-topology. 
 
@@ -200,7 +200,7 @@ The zeroness is $G$-local under any PL coverings. There is a sub-sheaf $\mathcal
     The sheaf $\mathcal{F}^{p,q}_{V_G}$ is G-separated. 
 \end{remark}
 
-\subsubsection*{1.10: Positive $G$-forms on PL subspaces.}
+\subsection*{1.10: Positive $G$-forms on PL subspaces.}
 
 Let $C$ be a cell. For any $\omega \in \mathcal{F}^{p,q}_C(C)$, its positivity is defined by evaluation at any point $x \in C$. By covering PL subspaces $P$ by cells, one can define positivity of forms on $P$ as well. We define a sheaf $\mathrm{CConv}_P$ to be the smallest subsheaf of the sheaf of continuous functions on $P$ that satisfy the following two properties: 
 \begin{itemize}
@@ -209,21 +209,21 @@ Let $C$ be a cell. For any $\omega \in \mathcal{F}^{p,q}_C(C)$, its positivity i
 \end{itemize}
 If $P$ is a cell, then a function is in this sheaf iff it is convex in the usual sense. 
 
-\subsection*{Chapter 2: PL Spaces}
-\subsubsection*{2.1: Various definitions.}
+\section*{Chapter 2: PL Spaces}
+\subsection*{2.1: Various definitions.}
 Let $X$ be a separated topological space. A PL chart on $X$ is a locally closed subset $P$ on $X$ with a continuous function $\phi\colon P \to V$, where $V$ is real affine space, such that $\phi$ is a homeomorphism onto a PL subspace of $V$. If $\phi(P)$ is a cell, this is called a cellular chart. Notions of equivalent charts are introduced, and $X$ is a PL space if it has a maximal class of PL charts. 
 
 Let $f\colon X \to Y$ be a map of PL spaces. We say $f$ is a piecewise immersion if there is a $G$-covering $\{P_i\}$ of PL subspaces of $X$ such that $f|_{P_i}$ is a homeomorphism onto its image, and the image is PL in $Y$.
 
-\subsubsection*{2.2: Cellular decomposition.}
+\subsection*{2.2: Cellular decomposition.}
 
 Let $X$ be a PL space and $C \subseteq X$ a subset. Two cellular charts $(C, f), (C, g)$ are equivalent if $g \circ f^{-1} \colon f(C) \to g(C)$ is the restriction of an affine map. Such an equivalent class $(C,f)$ is called a strong cell. See definition 2.2.4 for the axioms of a cellular decomposition of $X$. Now we have two types of structures on a PL space $X$, namely atlases and cellular decompositions, and the there is a notion of adapation (Def 2.2.11). If the atlas is locally finite and takes value in cells, then adapted cellular decomposition always exists (Proposition 2.2.15). 
 
-\subsubsection*{2.3: Relative cellular decomposition.} Given a map $f \colon X \to Y$ a PL map between PL spaces with respective cellular decomposition $(X, \mathcal{C})$ and $(Y, \mathcal{D})$, we can discuss how $f$ interacts with the cells. Definition 2.3.1 defines what it means for $(\mathcal{C}, \mathcal{D})$ to be adapted to $f$, and this section proves various existence results for cellular decompositions adapted to a map. 
+\subsection*{2.3: Relative cellular decomposition.} Given a map $f \colon X \to Y$ a PL map between PL spaces with respective cellular decomposition $(X, \mathcal{C})$ and $(Y, \mathcal{D})$, we can discuss how $f$ interacts with the cells. Definition 2.3.1 defines what it means for $(\mathcal{C}, \mathcal{D})$ to be adapted to $f$, and this section proves various existence results for cellular decompositions adapted to a map. 
 
-\subsection*{Chapter 3: $G$-Tropical Spaces}
+\section*{Chapter 3: $G$-Tropical Spaces}
 
-\subsubsection*{3.1: $G$-tropical spaces.} If a separated topological space $X$ has a $G$-topology, where the domains are certain locally closed subsets of $X$ satisfying the axioms, we can define a $G$-sheaf $\mathrm{PL}_X$ of PL functions axiomatically. To get a feeling of the axioms, we need that for any compact $W \subseteq X$, a PL map $f$ (i.e., each component is a PL function) should map $W$ to a PL subspace of $\mathbf{R}^m$; conversely, inverse image $f^{-1}(P)$ is a domain on $X$ for any PL subspace $P$ in $V$. A $G$-tropical chart on $X$ is a triple $(V, f, P)$, where $V$ is a domain on $X$, $f\colon V \to E$ is a PL map to some affine space $E$, and $P$ is a PL subspace of $E$ containing $f(V)$. (Note that since $V$ is only locally closed, $f(V)$ may not be a PL subspace.) In reality, we can often assume $P = E$ and omit it. If $x \in V$, then the tropical dimension of $f$ at $x$ is defined to be \[\mathrm{dim}_{\mathrm{trop},x}(f)\coloneqq \inf_{x \in W \subseteq V} \dim (f(W))\] where $W$ is any compact subset of $V$ that is a neighborhood of $x$. Using this, the tropical dimension of $x$ is \[\dim_{\mathrm{trop}}(x) \coloneqq \sup_{(V,f)} \dim_{\mathrm{trop},x}(f),\] and the tropical dimension of $X$ is \[\dim_{\mathrm{trop}}(X) \coloneqq \sup_{x \in X} \dim_{\mathrm{trop}}(x).\] For any $n \in \mathbf{N}$, we define \[X^{(n)} = \{x \in X \colon \dim_x X \geq n\}.\] If $X$ is PL, then $X^{(n)}$ is PL as well, and is $G$-covered by PL charts in $X$ with $\dim \geq n$.
+\subsection*{3.1: $G$-tropical spaces.} If a separated topological space $X$ has a $G$-topology, where the domains are certain locally closed subsets of $X$ satisfying the axioms, we can define a $G$-sheaf $\mathrm{PL}_X$ of PL functions axiomatically. To get a feeling of the axioms, we need that for any compact $W \subseteq X$, a PL map $f$ (i.e., each component is a PL function) should map $W$ to a PL subspace of $\mathbf{R}^m$; conversely, inverse image $f^{-1}(P)$ is a domain on $X$ for any PL subspace $P$ in $V$. A $G$-tropical chart on $X$ is a triple $(V, f, P)$, where $V$ is a domain on $X$, $f\colon V \to E$ is a PL map to some affine space $E$, and $P$ is a PL subspace of $E$ containing $f(V)$. (Note that since $V$ is only locally closed, $f(V)$ may not be a PL subspace.) In reality, we can often assume $P = E$ and omit it. If $x \in V$, then the tropical dimension of $f$ at $x$ is defined to be \[\mathrm{dim}_{\mathrm{trop},x}(f)\coloneqq \inf_{x \in W \subseteq V} \dim (f(W))\] where $W$ is any compact subset of $V$ that is a neighborhood of $x$. Using this, the tropical dimension of $x$ is \[\dim_{\mathrm{trop}}(x) \coloneqq \sup_{(V,f)} \dim_{\mathrm{trop},x}(f),\] and the tropical dimension of $X$ is \[\dim_{\mathrm{trop}}(X) \coloneqq \sup_{x \in X} \dim_{\mathrm{trop}}(x).\] For any $n \in \mathbf{N}$, we define \[X^{(n)} = \{x \in X \colon \dim_x X \geq n\}.\] If $X$ is PL, then $X^{(n)}$ is PL as well, and is $G$-covered by PL charts in $X$ with $\dim \geq n$.
 
 A locally compact, separated topological space with a $G$-topology and a $G$-sheaf $\mathrm{PL}_X$ is called a $G$-tropical space.
 
@@ -237,26 +237,26 @@ The intuition for $G$-tropical spaces is that it captures the unifying structure
 In 3.1.8, morphisms of $G$-tropical spaces are introduced. Roughly speaking, they are continuous maps that preserve both domains and PL functions. 
 
 
-\subsubsection*{3.2: PL subspaces of a $G$-tropical space.}
+\subsection*{3.2: PL subspaces of a $G$-tropical space.}
 Let $X = (X, \mathrm{Dom}(X), \mathrm{PL}_X)$ be a $G$-tropical space. For any locally closed subset $P \subseteq X$, we can define the notion of a PL chart on $P$ (see Def 3.2.1). It is stricter than $G$-tropical charts, has more restrictions on the map $f$, and is with respect to the chosen subset $P$. If such a PL chart exists, we say $P$ is faithfully PL.
 
 Suppose $P$ is faithfully PL, and let $\Lambda(P)$ be the collection of all PL charts. Then $P$ itself is a PL space (see Chapter 2) with atlas $\{(P, f) \colon f \in \Lambda(P)\}$.
 
 We now globalize faithfully PL sets. For any locally closed subset $\Sigma \subseteq X$, we say $\Sigma$ is PL in $X$ if it is $G$-covered by faithfully PL sets of the form $D_i \coloneqq \Sigma \cap W_i$, where $W_i \in \mathrm{Dom}(X)$. If this is the case, then $\{(D_i, f_i) \colon f_i \in \Lambda(P)\}$ makes is a PL atlas, and so $\Sigma$ is a PL space in its own right. 
 
-\subsubsection* {3.3: $(p,q)$-forms on a $G$-tropical space.}
+\subsection* {3.3: $(p,q)$-forms on a $G$-tropical space.}
 Let $X = (X, \mathrm{Dom}(X), \mathrm{PL}_X)$ be a $G$-tropical space. The category $\mathcal{C}$ of $G$-tropical charts on $X$ (with morphisms being affine maps on the ambient affine spaces) is a small, filtered category, and determines a $G$-site $X_G$. For any $V \in \mathrm{Dom}(X), p, q \in \mathbf{N}$ and coefficient sheaf $\mathcal{G}$, we can therefore define a presheaf \[\mathcal{G}_{pf}^{p,q}(V) \coloneqq \mathrm{colim}\ \mathcal{G}_{P}^{p,q}(P)\] where the colimit runs over all $G$-tropical charts $(f\colon V \to E, P)$ (here $P$ is some PL subspace of $E$ that contains $f(V)$; for forms on $P$ see 1.9). Its sheafification is denoted by $\mathcal{G}_{X_G}^{p,q}$, or sometimes just $\mathcal{G}_G^{p,q}$, whose sections are called $G$-forms of $(p,q)$-type. Any element $\alpha$ in $\mathcal{G}^{p,q}_P(P)$ pulls back to an element in $\mathcal{G}^{p,q}_{pf}(V)$, denoted by $f^* \alpha$. 
 
 Given a global $G$-form $\alpha \in \mathcal{G}_{X_G}^{p,q}(X)$, we consider its support. Let $U$ be the largest open subset of $X$ such that $\alpha|_{U} = 0$. The support $\mathrm{supp}(\alpha)$ is defined to be $U^c$. This is $G$-local. Moreover, if $x \in \mathrm{supp}(\alpha)$, then necessarily $d_{\mathrm{trop}}(x) \geq \max\{p,q\}$. 
 
-\subsubsection*{3.4: Nullity of $G$-forms.} Let $X$ be a compact $G$-tropical space with a global tropical chart $(f\colon X \to E, P)$. For any $\alpha \in \mathcal{G}_P^{p,q}(P)$, we have \[\alpha|_{f(X)} = 0 \iff f^*\alpha = 0 \in \mathcal{G}_{pf}^{p,q}(X).\] Being zero is $G$-local, and compactness of $X$ is necessary; see Prop 3.4.1. However, this characterization can be generalized to non-compact $G$-tropical spaces by considering all the compact domains and the actual sheaf $\mathcal{G}_{X_G}^{p,q}$. 
+\subsection*{3.4: Nullity of $G$-forms.} Let $X$ be a compact $G$-tropical space with a global tropical chart $(f\colon X \to E, P)$. For any $\alpha \in \mathcal{G}_P^{p,q}(P)$, we have \[\alpha|_{f(X)} = 0 \iff f^*\alpha = 0 \in \mathcal{G}_{pf}^{p,q}(X).\] Being zero is $G$-local, and compactness of $X$ is necessary; see Prop 3.4.1. However, this characterization can be generalized to non-compact $G$-tropical spaces by considering all the compact domains and the actual sheaf $\mathcal{G}_{X_G}^{p,q}$. 
 
 If $X$ is either a PL space or analytic space, then for any compact domain $Y \subseteq X$, the indicator function $\mathbf{1}_Y$ is $G$-Borel on $X$. So we can integrate on compact domains of $X$. For any coefficient sheaf $\mathcal{G}$ that is an $\mathcal{A}$-module, we have \[\mathcal{G}_{X_G} \otimes_{\mathcal{A}_{X_G}} \mathcal{A}_{X_G}^{p,q} \simeq \mathcal{G}_{X_G}^{p,q}.\]
 
-\subsubsection*{3.5: Positive forms on a $G$-tropical space.}
+\subsection*{3.5: Positive forms on a $G$-tropical space.}
 Let $X$ be a $G$-tropical space, and $\omega$ a symmetric $(p,p)$-form. It is positive if there is a $G$-covering $\{X_i\}$ of $X$ with $G$-tropical charts $(f_i \colon X_i \to E_i, P_i)$, and positive $(p,p)$-forms on $P_i$ such that $\omega|_{X_i} = f_i^*\alpha_i$. Ditto for strongly and weakly positive. Posivitiy is preserved under pullback, and is local in compact domains. 
 
-\subsubsection*{3.6: Topology on the space of $G$-forms.}
+\subsection*{3.6: Topology on the space of $G$-forms.}
 For any compact cell $C$ in an affine space, we can define a semi-norm (which in fact is a norm) $\| \cdot \|_{C,m}$ the the smooth $(p,q)$-forms $\mathcal{A}^{p,q}(C)$. We globalize this topology to PL spaces and more generally, $G$-tropical spaces. 
 
 For any PL space $X$, the topology $\mathcal{T}_m$ on $\mathcal{A}^{p,q}_{G}(X)$ is the coarest topology such that for any PL map $f \colon C \to X$, where $C$ is a compact cell, the pullback map $f^* \colon (\mathcal{A}^{p,q}_{G}(X), \mathcal{T}_m) \to (\mathcal{A}^{p,q}(C), \|\cdot \|_{m, C})$ is continuous. Under this topology, $X$ is separated. If $X$ is compact, then this topology is metrizable. 
@@ -269,16 +269,16 @@ We can also discuss how different tropicalizations affect the topology. Let $U \
 
 If $\mathcal{D}$ is a collection of tropical charts that form a $G$-covering of $X$, then $\mathcal{A}^{p,q}_{G,\mathcal{D}}(X)$ is defined to be the intersection of $\mathcal{A}^{p,q}_{f,G}(X)$ for all $f \in \mathcal{D}$, taken in $\mathcal{A}^{p,q}_G(X)$ with the intersection topology, denoted by $\mathcal{T}_{m,\mathcal{D}}$. 
 
-\subsubsection*{3.7: Passing to limit.}
+\subsection*{3.7: Passing to limit.}
 The inclusions $\mathcal{A}^{p,q}_{G,\mathcal{D}}(X) \subseteq \mathcal{A}^{p,q}_G(X)$ for various coverings $\mathcal{D}$ of $X$ allows us to define a locally convex topology on $\mathcal{A}^{p,q}_G(X)$, making all these inclusions continuous. 
 
 In reality, we sometimes need to restrict our attention to $G$-forms that are tropicalized by particular charts, or $G$-forms with compact support. To carry out this restriction, family with supports $\Phi$ and family of atlases $\Gamma$ are introduced. The $G$-forms tropicalized by $\mathcal{D} \in \Gamma$ with supports in $\Phi$ is denoted $\mathcal{A}^{p,q}_{\Phi, \Gamma}(X)$. This is also a topological space, and various continuity properties under $j_!$, $j^*$, $d', d''$ and $J$ are studied. 
 
-\subsection*{Chapter 4: Calibration and Integration on PL spaces}
-\subsubsection*{4.1: PL negligeability.}
+\section*{Chapter 4: Calibration and Integration on PL spaces}
+\subsection*{4.1: PL negligeability.}
 Let $X$ be a PL space and $d \in \mathbf{Z}_{\geq 0}$. We define a pre-subsheaf of $\mathcal{A}_{X_G}$ by: for any $Y$ that is PL in $X$, set \[\mathcal{I}_d(Y) \coloneqq \ker(\mathcal{A}_{X_G}(Y) \to \mathcal{A}_{X_G}(Y^{(d)})).\] Intuitiively, these are smooth functions that vanish at points of tropical dimension $\dim \geq d$. This is in fact a sheaf. For any $\mathcal{A}_{X_G}$-module $\mathcal{M}$, we have \[\mathcal{I}_d\mathcal{M}(Y) \coloneqq \ker(\mathcal{M}(Y) \to \mathcal{M}(Y^{(d)})).\] If $d = \max{\{p,q\}}$ and $\mathcal{G}$ is any coefficient sheaf, then $\mathcal{I}_d\mathcal{G}_{X_G} = \mathrm{Ann}(\mathcal{G}^{p,q}_{X_G})$. To consider forms that are supported at $\dim(X)$, we take the quotient $\mathcal{G}_{X_G}^{p,q} / \mathcal{I}_n\mathcal{G}^{p,q}_{X_G}$, which is locally free of rank ${n \choose p}\cdot {n \choose q}$ over the ring $\mathcal{G}_{X_G} / \mathcal{I}_n\mathcal{G}_{X_G}.$ If $f \colon X \to Y$ is a piecewise immersion and compact, then we can make sense of pushing forward of forms by using cellular decompositions. 
 
-\subsubsection*{4.2: Orientation of PL spaces.}
+\subsection*{4.2: Orientation of PL spaces.}
 For any PL space $X$ of dimension $n$, and fixed $G$-covering $\mathcal{C}$ of $X$, then for any $C \in \mathcal{C}$ we associate an $\{\pm1\}$-torsor $\mathrm{Or}(C)$, which encodes the two orientations of $C$. Then $\{\mathrm{Or}(C)\}_{C \in \mathcal{C}}$ forms a diagram, and the limit is denoted as $\mathrm{Or}_{\mathcal{C}}(X)$, whose sections are compactible orientations of $\mathcal{C}$. By taking colimit over all $G$-covers, we get a sheaf of orientation $\mathrm{Or}_{X_G}$, which is independent of the chosen $G$-cover. 
 
 If $\mathcal{M}$ is an $\mathcal{A}_{X_G}$-module annihilated by $\mathcal{I}_n$, such as $\mathcal{G}^{p,n}_G, \mathcal{G}^{n,p}_G$ for $p \leq n$, then for any PL subspace $Y \subseteq X$, let $\{\pm1\}$ act on $\mathcal{M}$ by multiplication by $\pm 1$. Then for any fixed $\epsilon \in \mathrm{Or}_G(Y)$, we have a bijection \[\mathcal{M}(Y) \to \mathcal{M}\times_{\{\pm 1\}} \mathrm{Or}_{X_G}(Y), m \mapsto (m,\epsilon).\]
@@ -286,7 +286,7 @@ If $\mathcal{M}$ is an $\mathcal{A}_{X_G}$-module annihilated by $\mathcal{I}_n$
     \includegraphics[width = 0.5\textwidth]{4.1.jpeg}
 \end{center}
 
-\subsubsection*{4.3: Volume forms on PL spaces}
+\subsection*{4.3: Volume forms on PL spaces}
 Let $X$ be a PL space of dimension $n$ and $\mathcal{G}$ be a coefficient sheaf. The $G$-sheaf of volume forms with $\mathcal{G}$-coefficients is \[|\mathcal{G}^{n,0}_G| \coloneqq \mathcal{G}_G^{n,0} \times_{\{\pm 1\}}\mathrm{Or}_{X_G}.\] This is locally of rank $1$ over $\mathcal{G}_{X_G} / \mathcal{I}_n \mathcal{G}_{X_G}$. 
 
 \begin{example}
@@ -295,7 +295,7 @@ Let $X$ be a PL space of dimension $n$ and $\mathcal{G}$ be a coefficient sheaf.
 
 One can naturally pullback such volume forms. If $f$ is a piecewise immersion of PL spaces, then one can also pushforward them by 4.1. 
 
-\subsubsection*{4.4: Measures associated to vector volumes.}
+\subsection*{4.4: Measures associated to vector volumes.}
 We get a map of $G$-sheaves $|\mathcal{B}_{X_G}^{n,0}| \to \mathrm{Meas}_{\mathrm{Bor},X}$, where $\mathcal{B}$ stands for Borel coefficients. This is carried out in several steps. 
 
 \begin{itemize}
@@ -308,7 +308,7 @@ We get a map of $G$-sheaves $|\mathcal{B}_{X_G}^{n,0}| \to \mathrm{Meas}_{\mathr
 If $\alpha^{\sharp} \in L^1_{\mathrm{loc}}$, then we can define a Radon measure $\omega_{\mathrm{Rad}}$ whose total variation equals $\omega_{\mathrm{Bor}}$. The construction of Borel measures commutes with pullback maps on cells. For a piecewise immersion $f$, we have $(f_*\alpha)_{\mathrm{Bor}} \leq f_*(\alpha_{\mathrm{Bor}}).$
 
 
-\subsubsection*{4.5: Calibration and integration of $(n,n)$-forms.}
+\subsection*{4.5: Calibration and integration of $(n,n)$-forms.}
 The idea of integrating an $(n,n)$-form on an $n$-dimensional PL space is to contract the $(0,n)$-part using a volume vector, and identify the $(n,0)$-part with the usual de Rham $n$-forms. Formally, we introduce the sheaf of calibrations on $X$, given by \[\mathrm{Cali}_X \coloneqq \mathcal{H}om_{X_G}(|\mathcal{G}^{n,0}_{X_G}|, \mathcal{G}_{X_G} / \mathcal{I}_n \mathcal{G}_{X_G}),\] which is $G$-locally of rank $1$ over $\mathcal{G}_{X_G} / \mathcal{I}_n \mathcal{G}_{X_G}$. For any PL cell $Y$ of dimension $n$, the following commutative diagram 
 
 \begin{center}
@@ -319,7 +319,7 @@ The idea of integrating an $(n,n)$-form on an $n$-dimensional PL space is to con
 \end{center}
 tensored with $\mathcal{G}^{n,0}_{X_G}$ gives us a map\footnote{This is because $\mathcal{G}^{n,0}_{X_G}$ has rank $1$ over $\mathcal{G}_{X_G} / \mathcal{I}_n \mathcal{G}_{X_G}$.} \[\mathcal{G}^{n,n}_{X_G} \to |\mathcal{G}^{n,0}_{X_G}|,\ \ \  \omega \mapsto \langle \omega, \mu\rangle.\] If $f \colon Y \to X$ is a piecewise immersion where $\dim(X), \dim(Y) \leq n$, then for any $(n,n)$-form $\omega$ on $X$ and any $\mu \in \mathrm{Cali}_Y$, we have a projection formula \[f_*\langle f^* \omega, \mu \rangle = \langle \omega, f_* \mu \rangle.\]
 
-\subsubsection*{4.6: Calibration and integration of $(n-1,n)$-forms.}
+\subsection*{4.6: Calibration and integration of $(n-1,n)$-forms.}
 Let $X$ be a PL space of dimension $n$ with a cell decomposition $\mathcal{C}$, and $\mu \in \Gamma(\mathrm{Cali}_X)$. Let $C \in \mathcal{C}$ be an $n$-dimensional cell, with $F < C$ be an $(n-1)$-dimensional cell. For any $(n-1,n)$-form $\omega$, we can define an $(n-1,n)$-form on $F$ with respect to the structure $F < C$, denoted $\langle \omega, \mu \rangle |_{(F,C)}$. Further, there exists a unique $n-1$-form $\langle \omega, \mu\rangle_{\mathcal{C}}$ on the union of all $(n-1)$-cells of $\mathcal{C}$ such that for any $(n-1)$-cell $F$, the following is satisfied: 
 \[\langle \omega, \mu \rangle_{\mathcal{C}} |_F = \sum_{C \supseteq F, C \in \mathcal{C}_n} \langle \omega, \mu \rangle|_{\langle F, C \rangle}.\]
 Here $\mathcal{C}_n \subseteq \mathcal{C}$ is the collection of all $n$-dimensional cells. It turns out that this form is actually independent of the choice of the decomposition $\mathcal{C}$, and therefore is simply denoted as $\langle \omega, \mu \rangle$, an $(n-1)$-form on $X$. This construction again satisfies a version of the projection formula, and moreover given any locally finite $G$-covering of $X$, there is an inclusion-exclusion formula for the calculation of this form. 
@@ -339,42 +339,42 @@ We define integrations
     \[\int_X \langle \alpha \wedge d'd''\beta - d'd''\alpha \wedge \beta, \mu \rangle = \int_{\partial X} \langle \alpha \wedge d'' \beta - d'' \alpha \wedge \beta, \mu \rangle. \]
 \end{theorem}
 
-\subsection*{Chapter 5: Calibrated $G$-tropical spaces}
-\subsubsection*{5.1: Chorded $G$-tropical spaces.} Given a $G$-tropical space $X$, the intersection of two closed PL subspaces is not necessarily PL. To avoid this issue, we need to single out a paricular collection $\mathcal{S}$ of PL subspaces of $X$ and of any $V \in \mathrm{Dom}(X)$ that are stable under finite unions and intersections. Elements in $\mathcal{S}$ are called elementarily skeletal subsets, and $(X, \mathcal{S})$ is a \emph{chorded $G$-tropical space}. Subsets of $X$ that are $G$-locally elementarily skeletal are called \emph{skeletal}. For any point $x \in X$ that lie in some skeletal subset, we say $x$ is \emph{skeletal}. If $X$ is a PL space, then one can simply take all PL subspaces are skeletal subsets. 
+\section*{Chapter 5: Calibrated $G$-tropical spaces}
+\subsection*{5.1: Chorded $G$-tropical spaces.} Given a $G$-tropical space $X$, the intersection of two closed PL subspaces is not necessarily PL. To avoid this issue, we need to single out a paricular collection $\mathcal{S}$ of PL subspaces of $X$ and of any $V \in \mathrm{Dom}(X)$ that are stable under finite unions and intersections. Elements in $\mathcal{S}$ are called elementarily skeletal subsets, and $(X, \mathcal{S})$ is a \emph{chorded $G$-tropical space}. Subsets of $X$ that are $G$-locally elementarily skeletal are called \emph{skeletal}. For any point $x \in X$ that lie in some skeletal subset, we say $x$ is \emph{skeletal}. If $X$ is a PL space, then one can simply take all PL subspaces are skeletal subsets. 
 
 Since by definition, the elementarily skeletal subsets (ESS) are PL subspaces, we can talk about their calibrations by Chapter 4. Definition 5.1.6 gives the notion of \emph{calibrated skeletal subsets purely of dimension $p$}. Such subsets form a lattice. 
 
-\subsubsection*{5.2: Vertebrate $G$-tropical spaces.} Let $X$ be a $G$-tropical space with $d_{\mathrm{trop}} \leq n$, and let $f \colon V \to \mathbf{R}^n$ be a $G$-tropical chart of $X$. The subset $\Sigma_f^{(n)}$ is the collection of all $x \in V$ with $d_{\mathrm{trop},x}(f) = n$. This is closed (possibly empty) in $X$. If $X$ is chorded and all such $\Sigma_f^{(n)}$ are skeletal, then $X$ is called a \emph{vertebrate $G$-tropical space}. For example, PL spaces are vertebrate. A consequence of this definition is that, in a vertebrate $G$-tropical space, PL subspaces of pure dimension are skeletal (see Proposition 5.2.6). The notion of \emph{(very) richness} measures the amplitude of compact skeletal subsets of $X$. Later, the book will equip any separeted, pure-dimensional $k$-analytic spaces over any complete field non-archimedean field $k$ with a vertebrate $G$-tropical structure, but the essential ingredients are already listed in Example 5.2.8. 
+\subsection*{5.2: Vertebrate $G$-tropical spaces.} Let $X$ be a $G$-tropical space with $d_{\mathrm{trop}} \leq n$, and let $f \colon V \to \mathbf{R}^n$ be a $G$-tropical chart of $X$. The subset $\Sigma_f^{(n)}$ is the collection of all $x \in V$ with $d_{\mathrm{trop},x}(f) = n$. This is closed (possibly empty) in $X$. If $X$ is chorded and all such $\Sigma_f^{(n)}$ are skeletal, then $X$ is called a \emph{vertebrate $G$-tropical space}. For example, PL spaces are vertebrate. A consequence of this definition is that, in a vertebrate $G$-tropical space, PL subspaces of pure dimension are skeletal (see Proposition 5.2.6). The notion of \emph{(very) richness} measures the amplitude of compact skeletal subsets of $X$. Later, the book will equip any separeted, pure-dimensional $k$-analytic spaces over any complete field non-archimedean field $k$ with a vertebrate $G$-tropical structure, but the essential ingredients are already listed in Example 5.2.8. 
 
-\subsubsection*{5.3: Strong support.} Let $X$ be a vertebrate $G$-tropical space of dimension $n$. Let $\omega$ be a $G$-form of type $(p,q)$ on $X$ where $\max(p,q) = n$. A closed skeletal subset $\Sigma$ of $X$ \emph{strongly supports} $\omega$ if for any other closed skeletal subset $T$ containing $\Sigma$, the form $\omega|_T$ is $\omega|_{\Sigma}$ extend by zero. Strong support is $G$-local. If $\Sigma$ strongly supports $\omega$, then so does $\Sigma^{(n)}$. If $\omega$ is tropicalized by a $G$-tropical chart $f$, then $\Sigma_f^{(n)}$ already strongly supports $\omega$. In general, if $X$ is paracompact or $\omega$ is compactly supported, then there always exists some closed skeletal subset of $X$ that strongly supports $\omega$. If $\Sigma$ strongly supports $\omega$, then the support (see 3.2) of $\omega|_{\Sigma}$ equals to the support of $\omega$ on $X$. 
+\subsection*{5.3: Strong support.} Let $X$ be a vertebrate $G$-tropical space of dimension $n$. Let $\omega$ be a $G$-form of type $(p,q)$ on $X$ where $\max(p,q) = n$. A closed skeletal subset $\Sigma$ of $X$ \emph{strongly supports} $\omega$ if for any other closed skeletal subset $T$ containing $\Sigma$, the form $\omega|_T$ is $\omega|_{\Sigma}$ extend by zero. Strong support is $G$-local. If $\Sigma$ strongly supports $\omega$, then so does $\Sigma^{(n)}$. If $\omega$ is tropicalized by a $G$-tropical chart $f$, then $\Sigma_f^{(n)}$ already strongly supports $\omega$. In general, if $X$ is paracompact or $\omega$ is compactly supported, then there always exists some closed skeletal subset of $X$ that strongly supports $\omega$. If $\Sigma$ strongly supports $\omega$, then the support (see 3.2) of $\omega|_{\Sigma}$ equals to the support of $\omega$ on $X$. 
 
-\subsubsection*{5.4: Agreeable charts, tropical polyhedrons and cones.} Let $X$ be a vertebrate $G$-tropical space of dimension $n$, and $f \colon V \to E$ be a $G$-tropical chart. A subset $C \subseteq X$ is an \emph{$f$-cell} if it is an $f$-cell of the PL subspace $\Sigma_f^{(n)}$. For example, if $f$ is homeomorphism onto its image, then the inverse images of $n$-dimensional cells in $f(V)$ are $f$-cells. Such $f$ is called \emph{agreeable} if $f(\Sigma_f^{(n)})$ is PL in $E$ anad $f|_{\Sigma_f^{(n)}}$ is proper onto its image. It this is the case, let $\Pi_f$ denote the PL space $f(\Sigma_f^{(n)})$ and call it the \emph{tropical polyhedron of $f$}. 
+\subsection*{5.4: Agreeable charts, tropical polyhedrons and cones.} Let $X$ be a vertebrate $G$-tropical space of dimension $n$, and $f \colon V \to E$ be a $G$-tropical chart. A subset $C \subseteq X$ is an \emph{$f$-cell} if it is an $f$-cell of the PL subspace $\Sigma_f^{(n)}$. For example, if $f$ is a homeomorphism onto its image, then the inverse images of $n$-dimensional cells in $f(V)$ are $f$-cells. Such $f$ is called \emph{agreeable} if $f(\Sigma_f^{(n)})$ is PL in $E$ anad $f|_{\Sigma_f^{(n)}}$ is proper onto its image. It this is the case, let $\Pi_f$ denote the PL space $f(\Sigma_f^{(n)})$ and call it the \emph{tropical polyhedron of $f$}. 
 
 Let $\mathcal{C}$ (resp. $\mathcal{C}'$, but possibly in a subset $\Sigma'$ of $\Sigma_f^{(n)}$) be a cellular decomposition of $\Sigma_f^{(n)}$ (resp. $\Sigma'$). Pick a point $x \in \Sigma_f^{(n)}$, and let $V$ (resp. $V')$ be the union of $n$-cells in $\mathcal{C}$ (resp. $\mathcal{C}'$) that contains $x$. By topological properties, the germs of the polyhedra $f(V)$ and $f(V')$ at $f(x)$ agree, which is a cone with vertex $f(x)$, and is called a \emph{tropical cone at $f(x)$} and denoted by $\Pi_{f,x}$. 
 
 %This is a compact PL neighborhood of $x$. Moreover, $f|_V$ is a piecewise immersion of $V$ that maps each $C$ in the union to a strong cell in $E$. Pick any other open paracompact $W'$ that is a neighborhood of $x$, and let $\mathcal{C}'$ be a cellular decomposition of $\Sigma_f^{(n)} \cap W'$. Moreover, let $V'$ be the union of $n$-cells in $\mathcal{C}'$ that contains $x$. Then $V \cap V'$ is a compact PL neighborhood of $x$ in $V$. By topology, there exists a compact PL neighborhood $U$ of $f(x)$ with $f^{-1}(U) \subseteq V \cap V'$. That is to say, the polyhedra $f(V)$ and $f(V')$ agree in a neighborhood of $f(x)$.  
 
-\subsubsection*{5.5: Calibrated $G$-tropical spaces.}
+\subsection*{5.5: Calibrated $G$-tropical spaces.}
 Let $X$ be a vertebrate $G$-tropical space of dimension $n$. It is \emph{calibrated} if every skeletal subset $\Sigma$ of $X$ is equipped with a strictly positive vector volume $\mu_\Sigma$ that is stable under taking skeletal subsets. This recovers the calibration of PL spaces. The tropical cone $\Pi_{f,x}$ is canonically calibrated. 
 
-\subsubsection*{5.6: Volume forms on vertebrate $G$-tropical spaces.} Let $p \leq n$ be integers, and $X$ is a calibrated $G$-tropical space. We say it is \emph{of level $n$} if $\dim{X} \leq n$. This section defines a sheaf $p$-dimensional vector volumes on $X$, whose sections are Lebesgue-type measures supported on skeletal subsets of dimension at most $p$. This is first defined on all skeletal subsets and then a $G$-sheaf, denoted $\mathcal{V}_{X_G}^{\mathcal{F}, p}$, where $\mathcal{F}$ is the coefficient sheaf. If $Y$ is a paracompact domain of $X$, then for any $\lambda \in \mathcal{V}_{X_G}^{\mathcal{F}, p}$, there exists a closed skeletal subset $\Sigma \subseteq Y$ of dimension $\leq p$ and a $p$-volume form $\lambda_{\Sigma}$ on $\Sigma$ that defines $\lambda$. One can also define positive $p$-volume forms. 
+\subsection*{5.6: Volume forms on vertebrate $G$-tropical spaces.} Let $p \leq n$ be integers, and $X$ is a calibrated $G$-tropical space. We say it is \emph{of level $n$} if $\dim{X} \leq n$. This section defines a sheaf $p$-dimensional vector volumes on $X$, whose sections are Lebesgue-type measures supported on skeletal subsets of dimension at most $p$. This is first defined on all skeletal subsets and then a $G$-sheaf, denoted $\mathcal{V}_{X_G}^{\mathcal{F}, p}$, where $\mathcal{F}$ is the coefficient sheaf. If $Y$ is a paracompact domain of $X$, then for any $\lambda \in \mathcal{V}_{X_G}^{\mathcal{F}, p}$, there exists a closed skeletal subset $\Sigma \subseteq Y$ of dimension $\leq p$ and a $p$-volume form $\lambda_{\Sigma}$ on $\Sigma$ that defines $\lambda$. One can also define positive $p$-volume forms. 
 
-\subsubsection*{5.7: Measures associated to $p$-dimensional volume forms.}
+\subsection*{5.7: Measures associated to $p$-dimensional volume forms.}
 Let $X$ be a calibrated $G$-tropical space of level $n$. For any $p$-volume form $\lambda$ with Borelien coefficients, there is a unique assignment $\lambda \mapsto \lambda_{\mathrm{Bor}}$, a Borel measure on $X_G$, such that for any domain $Y \subseteq X$ and any closed skeletal subset $\Sigma \subseteq Y$, the restriction of this assignment restores that in 4.4. For any function $u \colon X \to \mathbf{R} \cup \{\pm \infty\}$, by working with all skeletal subsets, we can define the notion of \emph{local integrability.} This is a $G$-local property. By using all Lebesgue-type measures on skeletal subsets, we can define the notion of \emph{negligible subsets of $X$}. This is also $G$-local. This allows us to define properties that hold \emph{almost everywhere} on $X$. 
 
-\subsubsection*{5.8: Integration of differential forms.}
+\subsection*{5.8: Integration of differential forms.}
 Let $X$ be a calibrated $G$-tropical space of level $n$. For any $\omega \in \mathcal{F}^{n,n}_{X_G}(X)$ with strong support $\Sigma$ (which has a calibration $\mu_\Sigma$), the $n$-vector form $\langle \omega|_{\Sigma}, \mu_{\Sigma}|_\Sigma \rangle$ on $X$ doesn't depend on the choice of $\Sigma$, and is denoted $\widetilde{\omega}$. If $\omega$ is tropicalized by some agreeable $G$-tropical chart $f \colon X \to E$, then the $n$-vector form and its pushforward to $E$ are related by a projection formula. We can define the notion of \emph{$(p,q)$-forms with locally integrable coefficients}. 
 
-\subsubsection*{5.9: Boundary measure.} This section concerns $(n-1,n)$-type forms $\omega$. FOr any closed skeletal subset $\Sigma$ that strongly supports $\omega$, the restriction $\omega|_{\Sigma^{(n)}}$ is an $(n-1)$-vector volume on $X$ and is independent of choice of $\Sigma$. 
+\subsection*{5.9: Boundary measure.} This section concerns $(n-1,n)$-type forms $\omega$. FOr any closed skeletal subset $\Sigma$ that strongly supports $\omega$, the restriction $\omega|_{\Sigma^{(n)}}$ is an $(n-1)$-vector volume on $X$ and is independent of choice of $\Sigma$. 
 
-\subsubsection*{5.10: Integrals and tropicalizations.} Let us be given an agreeable $G$-tropical chart $f \colon X \to E$, the tropical polyhedron $\Pi_f$ and the calibration $\mu_{\Pi_f}$. Let $\omega$ be an $(n-1, n)$ or $(n,n)$-Borelian form defined in a neighborhood of $f(X)$. This sections discusses the relation between the two Borel measures on $\Pi_f$ 
+\subsection*{5.10: Integrals and tropicalizations.} Let us be given an agreeable $G$-tropical chart $f \colon X \to E$, the tropical polyhedron $\Pi_f$ and the calibration $\mu_{\Pi_f}$. Let $\omega$ be an $(n-1, n)$ or $(n,n)$-Borelian form defined in a neighborhood of $f(X)$. This sections discusses the relation between the two Borel measures on $\Pi_f$ 
 \[f_{\mathrm{trop},*}(f^*\alpha)_{\mathrm{Bor}} \text{\,\,\,\,  and  \,\,\,\,} \langle \alpha, \mu_{\Pi_f}\rangle_{\mathrm{Bor}}, \] and between the two integrals \[\int_X f^* \alpha \text{\,\,\,\,  and  \,\,\,\,} \int_{\Pi_f} \langle \alpha, \mu_{\Pi_f}\rangle.\]
 
-\subsubsection*{5.11: Stokes' and Green's formulae. }
+\subsection*{5.11: Stokes' and Green's formulae. }
 This section generalizes formulae in 4.4 to all calibrated $G$-tropical spaces. 
 
-\subsection*{Chapter 6: Tropical Spaces}
-\subsubsection*{6.1: Affine $G$-tropical spaces.} Let $X$ be a $G$-tropical space. It is endowed with another sub-presheaf $\mathrm{L}_X$ of $\mathbf{Q}$-vector spaces of the $G$-sheaf $\mathrm{PL}_X$, whose sections are called \emph{the affine functions on $X$}. Any PL function $f$ on any domain $V \subseteq X$ is affine iff it is locally affine (not just in the $G$-topology). Moreover, a function $f$ on $V$ is PL iff it is $G$-locally affine. There are two main examples: 
+\section*{Chapter 6: Tropical Spaces}
+\subsection*{6.1: Affine $G$-tropical spaces.} Let $X$ be a $G$-tropical space. It is endowed with another sub-presheaf $\mathrm{L}_X$ of $\mathbf{Q}$-vector spaces of the $G$-sheaf $\mathrm{PL}_X$, whose sections are called \emph{the affine functions on $X$}. Any PL function $f$ on any domain $V \subseteq X$ is affine iff it is locally affine (not just in the $G$-topology). Moreover, a function $f$ on $V$ is PL iff it is $G$-locally affine. There are two main examples: 
 
 \begin{enumerate}
     \item when $X$ is the PL subspace of an affine space $E$, then for any $U \subseteq X$ PL subspace, the sections $\mathrm{L}_X(U)$ are functions that are locally restrictions of affine functions on $E$. 
@@ -383,23 +383,58 @@ This section generalizes formulae in 4.4 to all calibrated $G$-tropical spaces.
 
 A PL map of affine $G$-tropical spaces is affine if it preserves affine functions. The affine functions endow $X$ with a refined affine structure. 
 
-\subsubsection*{6.2: Smooth forms on affine $G$-tropical spaces. }
+\subsection*{6.2: Smooth forms on affine $G$-tropical spaces. }
 For general $G$-tropical spaces, we say a $G$-form $\omega$ with coefficients in $\mathcal{G}$ and defined on a domain $V$ is a \emph{form} if at each point $x \in V$, there is an open neighborhood $U$ of $x$ in the usual topology such that $\omega|_U$ is tropicalized. 
 
-If $X$ is an affine $G$-tropical space, we particularly take $\mathcal{G}$ to be the class of smooth functions, and we will use the affine functions to work in the usual topology, instead of the $G$-topology. We can define notions of separability on $X$. A stronger version is affine separability, and a weaker version is differential separability. However, if (paracompact) $X$ is affine, and differentially separable, then it enjoys a lot of properties of manifolds, including Stone-Weierstrass, smooth partition of unity, and the sheaves $\mathcal{A}^{p,q}_X$ (in the usual topology) of smooth forms are fine sheaves. 
+If $X$ is an affine $G$-tropical space, we particularly take $\mathcal{G}$ to be the class of smooth functions, and we will use the affine functions to work in the usual topology, instead of the $G$-topology. We can define notions of separability on $X$: a stronger version is affine separability, and a weaker version is differential separability. If (paracompact) $X$ is affine, and differentially separable, then it enjoys a lot of usual and useful properties of manifolds, including Stone-Weierstrass, smooth partition of unity, and the sheaves $\mathcal{A}^{p,q}_X$ (in the usual topology) of smooth forms are fine sheaves. 
 
-\subsubsection*{6.3: Local description of $G$-local objects}
-\subsubsection*{6.4: Topologies on the space of smooth forms}
-\subsubsection*{6.5: Positive forms.}
-\subsubsection*{6.6: Tropical spaces.}
-\subsubsection*{6.7: Examples.}
+\subsection*{6.3: Local description of $G$-local objects.} An affine tropical space $X$ is \emph{decent} at a point $x$ if for any domain $V$ containing $x$ and for any affine function $f$ on $V$, there is an \emph{open} neighborhood $U$ of $x$ in $X$ and some affine function $g \in \mathrm{L}_X(U)$ satisfying $f = g$ on $U \cap V$. The space $X$ is decent if it is decent at all points. This notion captures the amplitude of affine functions, allowing skeletal subsets and $G$-forms to have local description in terms of the usual topology: 
+\begin{enumerate}
+    \item Suppose $X$ is a vertebrate, affine, rich $G$-tropical space of level $n$. Let $\Sigma$ be a skeletal subset of $X$ and $x \in \Sigma$ a decent point. Then there is an open neighborhood $U$ of $x$ in $X$ and a $G$-tropical chart $f$ with $U \subseteq \mathrm{Dom}(f)$ such that $\Sigma \cap U \subseteq \Sigma^{(n)}_f$. (Prop 6.3.3)
+    \begin{center}
+        \includegraphics[width = 0.3\textwidth]{6.3.jpeg}
+    \end{center}
+    \item Suppose $X$ is an affine $G$-tropical space, and $\omega$ a $G$-form of coefficient $\mathcal{G}$ on $X$. Let $x \in X$ be a decent point. Then there is a compact domain $V$ containing $x$ such that $\omega|_V$ can be tropicalized. (Prop 6.3.4)
+    \item Suppose $X$ is a decent affine $G$-tropical space. Then all indicator functions of compact domains of $X$ are tropically Borel. 
+\end{enumerate}
 
+\subsection*{6.4: Topologies on the space of smooth forms.} Let $X$ be an affine $G$-tropical space. An atlas of tropical charts on $X$ is called \emph{covering} if the interior of the domains cover $X$. In particular, such a chart is $G$-covering. Let $\Gamma_X$ be the collection of all covering charts, which is naturally filtered. Then there is a natural $\mathcal{C}^m$ topology on the smooth forms $\mathcal{A}^{p, q}_{\Gamma_X}$, and under appropriate compactness conditions, natural operations such as pullback, wedge product, and differentiation are continuous and linear on $\mathcal{A}^{p, q}_{\Gamma_X}$. 
 
+\subsection*{6.5: Positive forms.} Let $X$ be an affine $G$-tropical space, and $\mathcal{G}$ be a coefficient sheaf. Then positive $G$-forms can be locally tropicalized on opens, and positivity comes from the positivity of the tropicalized form. 
 
+When $X$ is only a $G$-tropical space, then for any $G$-form $\omega$ with tropically continuous coefficients, to check positivity of $\omega$ it suffices to check the positivity of $\omega|_P$ for all skeletal subsets $P$. In particular, skeletal points are dense in $\mathrm{supp}(\omega)$. If $X$ is very rich, then it suffices to check skeletal subsets of dimension equaling $\dim(X)$.
 
+\subsection*{6.6: Tropical spaces. }A calibrated and affine $G$-tropical space $X$ is \emph{harmonic} if for any open $U$ and any tropical chart $f \colon U \to X$, the canonical calibration of $\Sigma_f^{(n)}$ is harmonic relative to $f$. (For precise definition of harmonicity, see 4.6.9; this notion captures the agreement of orientation along $(n-1)$-dimensional boundaries.) This section defines the notion of \emph{tropical spaces} in Definition 6.6.2, which imposes conditions on $\partial(X)$ and $\mathrm{Int}(X)$. For example, given a PL subspace $X$ of an affine space $E$, with a cellular decomposition $\mathcal{C}$ and constant calibration, then $X$ is a tropical space with $\partial(X)$ being the union of $(n-1)$-cells in $\mathcal{C}$. Domains of a tropical space are tropical spaces too. 
 
-\subsection*{Chapter 7: Currents on $G$-tropical spaces}
-\subsubsection*{}
+Theorem 6.6.8, condition of harmonicity, says that for a tropical space of level $n$ with an agreeable tropical chart $f \colon X \to E$, the cone $\Pi_f$ is harmonic outside of $f(\partial(X) \cap \Sigma_f^{(n)})$. (See 5.4 for the definitions.) 
+
+\subsection*{6.7: Examples.} This section gives examples of tropical spaces, such as intervals in $\mathbf{R} \cup \infty$ and projective limits of compatible tropical spaces. 
+
+\section*{Chapter 7: Currents on $G$-tropical spaces}
+Throughout this chapter, let $X$ be a tropical space of level $n$.
+\subsection*{7.1: Currents. } A bidimension $(p,q)$-\emph{current} on $X$ is a continuous linear map on $\mathcal{A}^{p,q}_c(X)$. The space of currents are equipped with $\mathcal{C}^\infty$-topology, and is a sheaf, denoted as $\mathcal{D}_{p,q}$. A current has order $\leq r$ if it is continuous with respect to the $\mathcal{C}^r$-topology on the forms. They form a graded algebra $\mathcal{D}$. Wedge product of currents with smooth forms is continuous. If $X$ is locally differentially separated and paracompact, then $\mathcal{D}_{p,q}$ are fine sheaves over $\mathcal{A}^{0,0}$. One can pushforward currents under proper maps, and extend currents by zero for certain embeddings. 
+
+\subsection*{7.2: Positive currents. }Various positivities of currents are defined using that of compactly positive forms. When $X$ is differentially separated, these positive currents are sheaves. Any Radon measure gives a current of bidmension $(0,0)$ and of order $0$ (however, the converse is not true; see Exemple 7.2.14). Moreover, \emph{positive} Radon measures on $X$ are in $1:1$ correspondence with \emph{positive} currents of bidimension $(0,0)$. Positivities are preserved under natural operations on currents. 
+
+In Prop 7.2.9, it is shown that if a linear map $S \colon \mathcal{A}^{p,p}_c(X) \to \mathbf{R}$ with $S(J \cdot ) = S(\cdot)$ is non-negative on all strongly positive forms, then $S$ defines a current of order $0$. This can be used to show that integration of locally integrable functions gives rise to bidimension $(n,n)$-currents or order $0$.
+
+When $\omega$ is a positive $(p,p)$-form and $T$ is a positive current, then $T \wedge \omega$ is a positive current of bidimension $(0,0)$. This gives rise to a unique measure $\mu^T_\omega$, which on smooth functions of compact support is \[u \mapsto \langle uT, \omega \rangle \eqqcolon \int_X u \mu^T_\omega.\]
+\subsection*{7.3: Currents of integration. }For any compactly supported smooth $(n,n)$-form $\alpha$ on $X$, the functional $\langle \delta_X, \alpha\rangle \coloneq \int_X \alpha$ is a bidimension $(n,n)$-current of order $0$. Similarly, one has the current of integration along the boundary, $\delta_X^\partial$, which is a bidimension $(n-1,n)$-current of order $0$ with support in $\partial(X)$. 
+
+Any $G$-form of type $(p,q)$ with tropically Borelian, locally bounded coefficients define (1) a bidimension $(n-p,n-q)$-current of integration, and (2) bidimension $(n-p-1,n-q)$-current of integration along the boundary. If this form $\omega$ is smooth, then (1) is $\delta_X \wedge \omega$, and (2) is $\delta_X^\partial \wedge \omega$. Positivities of forms translate to those of currents, and zeroness of a such an associated current translates to vanishing of the form on skeletal sets of top dimension. By 5.3, one can deduce zeroness of the form. 
+
+When $X$ is very rich, one can in fact equate positivities forms and their associated currents. One can further determine positivity and zeroness of forms on $\mathrm{Int}(X)$. Moreover, the support of $\delta_X$ is $X$. 
+
+\subsection*{7.4: Positive currents and $G$-topology. }Positive currents can also act on $G$-smooth $G$-forms $\alpha$ with support in (non-necessarily open) domains in $X$. In fact, there is a unique $\mathbf{R}$-linear map of $G$-sheaves from positive $G$-smooth $G$-forms to positive Radon measures on $X$, that extends the map $\omega \mapsto \mu^T_\omega$ from 7.2 for smooth forms $\omega$. Various positivities of $G$-forms translates to positivities of the measures. 
+
+When $\mathcal{A}_{G,c}^{p,p}$ has $\mathcal{C}^0$-topology, for any positive current $T$, the pairing $\alpha \mapsto \langle \alpha, T\rangle $ is continuous. Moreover, wedge product of positive currents and $G$-forms is well-defined. 
+\subsection*{7.5: Skeletal currents. }
+\subsection*{7.6: Skeletal currents and $G$-topology. }
+\subsection*{7.7: Differential calculus on currents. }
+\subsection*{7.8: Harmonic charts. }
+
+\section*{Chapter 8: A Bedford-Taylor theory}
+
 
 
 \bibliographystyle{alpha}
