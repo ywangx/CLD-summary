@@ -425,16 +425,44 @@ Any $G$-form of type $(p,q)$ with tropically Borelian, locally bounded coefficie
 
 When $X$ is very rich, one can in fact equate positivities forms and their associated currents. One can further determine positivity and zeroness of forms on $\mathrm{Int}(X)$. Moreover, the support of $\delta_X$ is $X$. 
 
-\subsection*{7.4: Positive currents and $G$-topology. }Positive currents can also act on $G$-smooth $G$-forms $\alpha$ with support in (non-necessarily open) domains in $X$. In fact, there is a unique $\mathbf{R}$-linear map of $G$-sheaves from positive $G$-smooth $G$-forms to positive Radon measures on $X$, that extends the map $\omega \mapsto \mu^T_\omega$ from 7.2 for smooth forms $\omega$. Various positivities of $G$-forms translates to positivities of the measures. 
+\subsection*{7.4: Positive currents and $G$-topology. }Positive currents can also act on $G$-smooth $G$-forms $\alpha$ supported in (non-necessarily open) domains in $X$. In fact, there is a unique $\mathbf{R}$-linear map of $G$-sheaves from positive $G$-smooth $G$-forms to positive Radon measures on $X$, that extends the map $\omega \mapsto \mu^T_\omega$ from 7.2 for smooth forms $\omega$. Various positivities of $G$-forms translates to positivities of the measures. 
 
 When $\mathcal{A}_{G,c}^{p,p}$ has $\mathcal{C}^0$-topology, for any positive current $T$, the pairing $\alpha \mapsto \langle \alpha, T\rangle $ is continuous. Moreover, wedge product of positive currents and $G$-forms is well-defined. 
-\subsection*{7.5: Skeletal currents. }
+
+\subsection*{7.5: Skeletal currents. } These are special currents that encapture integration on closed skeletal subsets. Suppose $X$ is a tropical space of level $n$ and locally affinely separated. Let $T$ be a bidimension $(p,p)$-current on $X$. Let $f \colon U \to X$ be a tropical chart on $X$, where $U$ is open in $X$, and $P \subseteq U$ is a closed skeletal subset of dimension $\leq p$, equipped with a $p$-calibration that is $G$-locally constant. We say \emph{$P$ describes $T$ relative to $f$} if, for any smooth $(p,p)$-form $\omega$ on $U$ tropicalized by $f$, and for any smooth function $\rho$ compactly supported on $U$, we have 
+\[\langle T, \rho \omega \rangle = \int_P \rho \omega|_P.\] If such description exists for all opens $U$ in $X$ and all tropical charts $f$ on $U$, then $T$ is said to be a \emph{skeletal current}. Such currents are symmetric of order $0$. Two examples of skeletal currents are: 
+\begin{enumerate}
+    \item Let $P$ a closed skeletal subset of dimension $p$ in $X$, then $\delta_P$ is skeletal. 
+    \item If $X$ has no boundary, then $\delta_X$ is skeletal: for any tropical chart $f$, this current can be described by the skeletal subset $\Sigma_f^{(n)}$ (with the canonical calibration). 
+\end{enumerate}
+
+For any (not necessarily closed) skeletal subset $P$ with a $G$-locally constant calibration, one can associate a closed skeletal subset $|P|$. For any skeletal current $T$ and any tropical chart $(f,V)$ of $X$, there is always an explicit smallest closed, pure-dimensional skeletal subset that describes $T$ on $V$: it is denoted $P^T_f$ and $f|_{P^T_f}$ is a piecewise immersion. In particular, $P^T_f \subseteq \mathrm{Supp}(T)$. 
+
+Skeletal currents of bidimension $(p,p)$ form an lattice by taking pointwise sup and inf. In particular, any skeletal current can be decomposed into two positive currents. Different positivity notions coincide for skeletal currents. 
+
 \subsection*{7.6: Skeletal currents and $G$-topology. }
+Because skeletal currents can be written as differences of positive currents by 7.5, using 7.4 one can apply skeletal currents to $G$-smooth $G$-forms. Let $X$ be a locally differentially separated and decent tropical space. Then in 7.5 one can also work with $G$-tropical charts. This leads to a $G$-presheaf of skeletal currents, which is in fact a $G$-sheaf. 
+
 \subsection*{7.7: Differential calculus on currents. }
-\subsection*{7.8: Harmonic charts. }
+By duality, one can define the differential operators $d', d''$ on currents. For example, if $\omega$ is a $(p,q)$-$G$-form on $X$, with associated bidimension $(n-p, n-q)$-current $[\omega]$, then Stokes' formula translates to the equality of currents \[d' \omega = [d'\omega] - [\omega]^\partial.\] Taking $d'$ on a skeletal current $T$ (relative to a chart $f$) amounts to integration on $\partial(P^T_f)$ (see 7.5). If $X$ is boundaryless, then $\delta_X$ is $d'$-closed; this translates to the harmonic condition in 6.6.
 
-\section*{Chapter 8: A Bedford-Taylor theory}
+\subsection*{7.8: Harmonic charts. }Let $X$ be a \emph{boundaryless} tropical space of level $n$. We consider a special class of tropical charts. If $\omega$ is a form (as opposed to a $G$-form) on $X$, then Stokes' formula give \[d' [\omega] = [d'\omega].\] However, this is not the case for all $G$-forms. A particular class of $G$-forms where this equality of currents hold, is when it is tropicalized by a \emph{harmonic} tropical chart $u$ is \emph{harmonic}, which means the current $d' d'' [u]$ is zero. Such $G$-forms are called \emph{harmonically tropicalizable}, and forms a graded subalgebra of $\mathcal{A}_{X^G}(X)$. The forms that are locally harmonically tropicalizable form a sheaf $\mathcal{A}^{\bullet,\bullet}_{X, \mathrm{harm}}$. The inclusion $\mathcal{A}^{\bullet,\bullet}_{X, \mathrm{harm}} \hookrightarrow \mathcal{D}_X$ commutes with operators $d', d''$, thanks to the boundary current vanishing. 
 
+\section*{Chapter 8: A Bedford--Taylor theory}
+
+\subsection*{8.1: Plurisubharmonic functions. }
+
+\subsection*{8.2: Tropical convexity. }
+
+\subsection*{8.3: PSH functions and positive currents. }
+
+\subsection*{8.4: Chern--Levine--Nirenberg inequalities. }
+
+\subsection*{8.5: Bedford--Taylor theory: product with a a positive current of bidegree $(1,1)$. }
+
+\subsection*{8.6: Bedford--Taylor currents. }
+
+\subsection*{8.7: Bedford--Taylor theory: iteration. }
 
 
 \bibliographystyle{alpha}
