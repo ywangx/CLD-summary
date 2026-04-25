@@ -127,7 +127,7 @@
 %\thanks{}
 
 \author[Ying Wang]{Ying Wang}
-\begin{abstract}This is a summary of the French monograph by \cite{CLD25}, which in particular develops a local theory of pluripotential functions on analytic spaces. All errors are mine and corrections are welcome. 
+\begin{abstract}This is my personal summary of the French monograph by \cite{CLD25}, which in particular develops a local theory of pluripotential functions on analytic spaces. I have benefited a lot from the ongoing learning seminar organized by Mingchen Xia. All errors are mine and corrections are welcome at \url{ywangx@umich.edu}. This is a work in process; to access the most updated version, please import from \url{https://github.com/ywangx/CLD-summary}.
 \end{abstract}
 %\address{Department of Mathematics\\University of Michigan\\Ann Arbor, MI 48109-1043\\USA}
 
@@ -446,15 +446,20 @@ Because skeletal currents can be written as differences of positive currents by 
 \subsection*{7.7: Differential calculus on currents. }
 By duality, one can define the differential operators $d', d''$ on currents. For example, if $\omega$ is a $(p,q)$-$G$-form on $X$, with associated bidimension $(n-p, n-q)$-current $[\omega]$, then Stokes' formula translates to the equality of currents \[d' \omega = [d'\omega] - [\omega]^\partial.\] Taking $d'$ on a skeletal current $T$ (relative to a chart $f$) amounts to integration on $\partial(P^T_f)$ (see 7.5). If $X$ is boundaryless, then $\delta_X$ is $d'$-closed; this translates to the harmonic condition in 6.6.
 
-\subsection*{7.8: Harmonic charts. }Let $X$ be a \emph{boundaryless} tropical space of level $n$. We consider a special class of tropical charts. If $\omega$ is a form (as opposed to a $G$-form) on $X$, then Stokes' formula give \[d' [\omega] = [d'\omega].\] However, this is not the case for all $G$-forms. A particular class of $G$-forms where this equality of currents hold, is when it is tropicalized by a \emph{harmonic} tropical chart $u$ is \emph{harmonic}, which means the current $d' d'' [u]$ is zero. Such $G$-forms are called \emph{harmonically tropicalizable}, and forms a graded subalgebra of $\mathcal{A}_{X^G}(X)$. The forms that are locally harmonically tropicalizable form a sheaf $\mathcal{A}^{\bullet,\bullet}_{X, \mathrm{harm}}$. The inclusion $\mathcal{A}^{\bullet,\bullet}_{X, \mathrm{harm}} \hookrightarrow \mathcal{D}_X$ commutes with operators $d', d''$, thanks to the boundary current vanishing. 
+\subsection*{7.8: Harmonic charts. }Let $X$ be a \emph{boundaryless} tropical space of level $n$. We consider a special class of tropical charts. If $\omega$ is a form (as opposed to a $G$-form) on $X$, then Stokes' formula give \[d' [\omega] = [d'\omega].\] However, this is not the case for all $G$-forms. A particular class of $G$-forms where this equality of currents hold, is when they are tropicalized by \emph{harmonic} tropical charts $u$, which means the current $d' d'' [u]$ is zero. Such $G$-forms are called \emph{harmonically tropicalizable}, and form a graded subalgebra of $\mathcal{A}_{X_G}(X)$. The forms that are locally harmonically tropicalizable form a sheaf $\mathcal{A}^{\bullet,\bullet}_{X, \mathrm{harm}}$. The inclusion $\mathcal{A}^{\bullet,\bullet}_{X, \mathrm{harm}} \hookrightarrow \mathcal{D}_X^{\bullet,\bullet}$ commutes with operators $d', d''$, thanks to the boundary current vanishing. 
 
 \section*{Chapter 8: A Bedford--Taylor theory}
 
-\subsection*{8.1: Plurisubharmonic functions. }
+\subsection*{8.1: Plurisubharmonic functions. }Let $X$ ba an affine $G$-tropical space. The sheaf $\mathrm{Psh}_X$ of \emph{plurisubharmonic (psh) functions} is the smallest subsheaf of $\mathbf{R}\cup \{-\infty\}$-valued functions on $X$ such that for any open $U$, the set $\mathrm{Psh}_X(U)$
+\begin{enumerate}
+    \item contains all smooth functions $u$ on $U$ with $d'd''u \geq 0$, 
+    \item is closed under decreasing limits.
+\end{enumerate}
+Any psh function is upper semicontinuous. In particular, constants are psh. Because $X$ is locally compact, decreasing limits can be improved to local uniform convergence by Dini's theorem. In complex geometry, any psh function can be written as decreasing limits of \emph{smooth} psh functions; this is not known over general tropical spaces; such psh functions are called \emph{approachable}. Pullback along affine maps preserves psh functions. The subsheaf $\mathrm{CPsh}_X \subseteq \mathcal{C}^0_X$ of \emph{continuous psh functions} can analogously be defined as the smallest subsheaf satisfying certain axioms (in paricular, stable under uniform limits). But it can be verified that $\mathrm{CPsh}_X$ equals $\mathcal{C}^0_X \cap \mathrm{Psh}_X$ and in particular contains all approachable psh functions. 
 
-\subsection*{8.2: Tropical convexity. }
+\subsection*{8.2: Tropical convexity. }Let $X$ be an affine tropical space. The composition of psh functions with convex functions increasing in each variable is psh. In particular, pointwise maximum of psh functions is psh. Given a tropical chart $f \colon U \to \mathbf{R}^n$ and a convex function $v$ on $\mathbf{R}^n$, the pullback $f^* v$ is in $\mathrm{CPsh}_X$. A function on $X$ that can be locally written as such is called a \emph{tropically convex function}.
 
-\subsection*{8.3: PSH functions and positive currents. }
+\subsection*{8.3: PSH functions and positive currents. }Let $X$ be a boundaryless affine $G$-tropical space, locally differentially separated, very rich and decent. Let $u \colon X \to \mathbf{R}\cup\{-\infty\}$ be a locally integrable function. If $u$ is psh, then the current $d'd''[u] \geq 0$. Moreover, if $u$ is smooth, then the converse direction holds. If $X = \mathbf{R}^n$, then for any $U$ convex open, $\mathrm{Psh}(U) = \mathrm{CPsh}(U) = \{u \text{ on } U \text{ convex}\}.$
 
 \subsection*{8.4: Chern--Levine--Nirenberg inequalities. }
 
