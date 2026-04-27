@@ -459,15 +459,21 @@ Any psh function is upper semicontinuous. In particular, constants are psh. Beca
 
 \subsection*{8.2: Tropical convexity. }Let $X$ be an affine tropical space. The composition of psh functions with convex functions increasing in each variable is psh. In particular, pointwise maximum of psh functions is psh. Given a tropical chart $f \colon U \to \mathbf{R}^n$ and a convex function $v$ on $\mathbf{R}^n$, the pullback $f^* v$ is in $\mathrm{CPsh}_X$. A function on $X$ that can be locally written as such is called a \emph{tropically convex function}.
 
-\subsection*{8.3: PSH functions and positive currents. }Let $X$ be a boundaryless affine $G$-tropical space, locally differentially separated, very rich and decent. Let $u \colon X \to \mathbf{R}\cup\{-\infty\}$ be a locally integrable function. If $u$ is psh, then the current $d'd''[u] \geq 0$. Moreover, if $u$ is smooth, then the converse direction holds. If $X = \mathbf{R}^n$, then for any $U$ convex open, $\mathrm{Psh}(U) = \mathrm{CPsh}(U) = \{u \text{ on } U \text{ convex}\}.$
+\subsection*{8.3: PSH functions and positive currents. }Let $X$ be a boundaryless affine $G$-tropical space, locally differentially separated, very rich and decent. Let $u \colon X \to \mathbf{R}\cup\{-\infty\}$ be a locally integrable function. If $u$ is psh, then the current $d'd''[u] \geq 0$. Moreover, if $u$ is smooth, then the converse direction holds. If $X = \mathbf{R}^n$, then for any $U$ convex open, we have $\mathrm{Psh}(U) = \mathrm{CPsh}(U) = \{u \text{ on } U \text{ convex}\}.$
 
-\subsection*{8.4: Chern--Levine--Nirenberg inequalities. }
+\subsection*{8.4: Chern--Levine--Nirenberg inequalities. }Let $T$ be a positive, closed bidegree $(p,p)$-current, and $\omega$ be a smooth form of type $(p-q,p-q)$ where integer $q \in [0,p]$. For any compact neighborhood $K$ of $\mathrm{Supp}(\omega)$, there is some integer $C_{K, \omega} \geq 0$ such that for all smooth functions $(u_0, \cdots, u_q)$ on $X$ with $u_1, \cdots, u_q$ psh, the following inequality holds:
+\[|\langle u_0 \cdot d'd''u_1 \wedge \cdots \wedge d'd''u_q \wedge T, \omega\rangle| \leq C_{K, \omega} \|u_0\|_K \|u_1\|_K \cdots \|u_q\|_K.\]
 
-\subsection*{8.5: Bedford--Taylor theory: product with a a positive current of bidegree $(1,1)$. }
+\subsection*{8.5: Bedford--Taylor theory: product with a a positive current of bidegree $(1,1)$. }Let $X$ be a boundaryless tropical space of level $n$. If positive currents $(T_n)$ converge to a current $T$, and $(u_n)$ are smooth functions that locally uniformly converge to some function $u$, then $u_nT_n \to uT$. (Those products are well-defined by 7.2.) If $T$ is positive and $u$ is continuous psh, the current $d'd''(uT)$ is also positive and closed. Being positive and closed is preserved under pushforward along topologically proper morphisms, and there is a projection formula: 
+\[d'd''(u) \wedge j_* S = j_*(d'd''(j^*u) \wedge S).\]
 
-\subsection*{8.6: Bedford--Taylor currents. }
+Say $S$ is a closed symmetric bidegree $(p,p)$-current and $\alpha$ is a \emph{smooth} symmetric form of type $(q,q)$ where integer $q \leq p - 1$. Then just like in complex geometry, we have \[d'd''(\alpha \wedge S) = (d'd'' \alpha) \wedge S.\]
 
-\subsection*{8.7: Bedford--Taylor theory: iteration. }
+\subsection*{8.6: Bedford--Taylor currents. }In complex geometry, if $T$ is positive closed current, then for any two functions $u,v$ with $dd^cu = dd^cv$, the currents $dd^c(uT)$ and $dd^c(vT)$ are equal as well. (This is because we can molify $u,v$ globally and use $dd^c(fT) = (dd^cf)\wedge T$ for any $f$ \emph{smooth} and take limits.) However, this is not known for general $T$ on tropical spaces. If a positive closed current $T$ has this property over all opens $U$, then it is called a \emph{Bedford--Taylor (BT) current}, and it follows that the notation $d'd''(u) \wedge T$ makes sense (i.e., equals to $d'd''(u T)$ and independent of choice of approximation $d'd''u_k \wedge T$.)
+
+Being BT is a local property, stable under weak limits, stable under $T \mapsto uT$ for $u$ continuous positive, and stable under $T \mapsto d'd''(uT)$ for $u$ continuous psh. The current of integration $\delta_X$ is BT. 
+
+\subsection*{8.7: Bedford--Taylor theory: iteration. }Let $u_1, \cdots, u_q$ be psh functions on $X$ and $T$ a BT current. When $T$ is merely positive closed, then the current $d'd''(u_1 d'd''(u_2 d'd''(\ldots d'd''(u_qT))))$ is always well-defined. But when $T$ is BT, by the results from 8.6, the notation $d'd''(u_1) \wedge d'd''(u_2) \wedge \cdots \wedge d'd''(u_q) \wedge T$ is well-defined and equals to the current before. This is called a BT product, and is symmetric. In particular, because $\delta_X$ is BT, the current $d'd''u_1 \wedge \cdots \wedge d'd'' u_q$ is well-defined (for $u_i$ psh). 
 
 
 \bibliographystyle{alpha}
