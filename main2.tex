@@ -508,8 +508,20 @@ the measure $d'd''u_1 \wedge \ldots \wedge d'd''u_m \wedge \alpha$ does not char
 If a metric is smooth, it is called a \emph{smooth metric}. If $X$ is paracompact, locally holomorphic separated, and good, then any \emph{line bundle} over $X$ (equivalently, over $X_G$) poccesses a smooth metric, but this is not necessarily the case for vector bundles.  
 
 \subsection*{17.2: PL metrics. }
+Let $X$ be an analytic space, $E$ a vector bundle with fixed base $(e_1, \ldots, e_n)$. For any continuous, $\mathbf{R}_{>0}$-valued functions $(u_1, \ldots, u_n)$ on $X$, there is a unique continuous metric $\| \cdot \|$ on $E$ with the following property: for any analytic morphism $\phi \colon Y \to X$ and any functions $f_1, \ldots, f_n$ on $U$, the equality holds: 
+\[\| (\sum f_i \phi^* e_i)(y)\| = \max_i u_i(\phi(y)) |f_i(y)|.\] This metric is denoted $\max_i u_i \cdot |e_i^\vee|.$ For the base $(e_1, \ldots, e_n)$, if we can find a metric $\| \cdot \|$ on $E$ that can be realized in this form, then the base is said to be \emph{orthogonal}. If $E$ pocesses a metric $\| \cdot \|$ such that $G$-locally it pocesses an orthogonal basis $e_i$ with $\log\|e_i\|$ being PL functions, then $E$ is called a \emph{PL metrized vector bundle}. 
 
-\subsection*{17.3: Residual bundle of an integral PL bundle. }
+\begin{example}
+    \begin{enumerate}
+        \item The trivial metric on the line bundle $\mathcal{O}_X$ given by $\|f\| \coloneqq |f|$ is PL; 
+        \item For any continuous function $u$ on $X$, the twisted metric on $\mathcal{O}_X$ given by $\|f\| \coloneqq e^{-u}|f|$ is PL iff $u$ is PL;
+        \item Direct sum, tensor product, and inverse of PL metrized bundles are also PL metrized. 
+    \end{enumerate}
+\end{example}
+
+If $E$ is PL metrized and $s$ is a local section, then $\{\|s\| \leq r\}$ is an analytic domain. Similar results hold if $X$ is a \emph{strict} $k$-analytic space, or replacing PL by integral PL. 
+
+\subsection*{17.3: Residual bundle of an integral PL bundle. }Let $X$ be a separated $k$-analytic space with a base point $x$, and $E$ be an integral PL metrized vector bundle of rank $n$ over $X$. The stalk $E(x)$ is a normed $n$-dimensional $\mathcal{H}(x)$-vector space, and so is the graded reduction $\widetilde{E(x)}$ over $\widetilde{\mathcal{H}(x)};$ both bases come from that of $E$ in a neighborhood of $x$. If $X$ is good, then for any nonzero homogeneous element $\sigma \in \widetilde{E(x)}$, there is a well-defined map \[\widetilde{(X,x)} \to \mathbf{R}, \ v \mapsto v(\sigma) \in v(\widetilde{\mathcal{H}(x)}^\times),\] which defines a metric on $\widetilde{(X,x)}$ over the graded $\widetilde{\mathcal{H}(x)}$-vector space $\widetilde{E(x)}.$ When $X$ is not good, by working in the $G$-topology and glueing, we get a metrized \emph{residual vector bundle} $\widetilde{E_x}$ over $\widetilde{(X,x)}$; to make sense of this, we need to know that sections $s$ of $\widetilde{E_x}$ are $G$-local lifts of homogeneous elements $\sigma$ of $\widetilde{E(x)}$, and the metric is the data of, given a section $s$, the map $v \in \widetilde{(X,x)}$ to $v(\widetilde{\mathcal{H}(x)}^\times) \subseteq \mathbf{R}$ using the map defined before. The graded vector space $\widetilde{E(x)}$ is the generic fiber of the vector bundle $\widetilde{E_x}$. 
 
 \subsection*{17.4: Properties of the reduction functor of metrized bundles. }
 
@@ -522,14 +534,43 @@ If a metric is smooth, it is called a \emph{smooth metric}. If $X$ is paracompac
 \subsection*{17.8: Psh metrics. }
 
 \section*{Chapter 18: Products of curvature currents}
+\begin{center}
+    \emph{Throughout  this chapter, let $X$ be an $n$-dimensional boundaryless $k$-analytic space.}
+\end{center}
+\subsection*{18.1: Curvature of a metrized line bundle. }Let $\bar{L}$ be a line bundle on $X$ with a continuous (resp. smooth, PL) metric $\| \cdot \|$. By glueing together local invertible sections, $L$ gives rise to a global function in $\mathcal{C}_X / \log(|\mathcal{O}_X^\times|)$ (resp. $\mathcal{A}_X^0 / \log(|\mathcal{O}_X^\times|)$ and $\mathrm{PL}_X / \log(|\mathcal{O}_X^\times|)$). 
 
-\subsection*{18.1: Curvature of a metrized line bundle. }
+Because $X$ is boundaryless, there is a well-defined map \[\mathcal{C}_X / \log(|\mathcal{O}_X^\times|) \to \mathcal{D}^{1,1}, \,\,\,u \mapsto d'd''[u].\] Applying this to the function associated to $L$, we get a $(1,1)$-current denoted $c_1(\bar{L})$, called \emph{the curvature current of $\bar{L}$}. Locally, for an invertible section $s$ over an open $U$, this current can be written as $d'd''\log\|s\|^{-1}$. This current is both $d'$ and $d''$-closed; if $\|\cdot\|$ is smooth, then it is a form; if $\| \cdot \|$ is psh, then it is a positive current. Similar constructions can be carried out for singular metrics as long as they are locally integrable. 
+
+Let $\mathcal{M}_X$ be the sheaf of meromorphic functions on $X$. The Poincar\'{e}-Lelong formula (see 16.7) globalizes: if $s$ is an invertible section of $L \otimes_{\mathcal{O}_X} \mathcal{M}_X$, then the following equality of currents holds; here $[\log\|s\|^{-1}]$ denotes the extension by zero current to all of $X$: 
+\[d'd''[\log\|s\|^{-1}] + \delta_{\mathrm{div}(s)} = c_1(\bar{L}).\]
+In particular, if $X$ is a curve, then the total mass of $c_1(\bar{L})$ equals $\deg(L)$, and so is independent of the metric. 
 
 \subsection*{18.2: Canonical current of a curve. }
 
-\subsection*{18.3: Products of curvature currents. }
+\subsection*{18.3: Products of curvature currents. }Let $\overline{L_1}, \cdots, \overline{L_m}$ be line bundles on $X$ with dpsh metrics. By 18.1, we get global functions $u_i$ in $\mathrm{CPSH}_X^\pm / \log(|\mathcal{O}_X^\times|)$ whose $d'd''$-images represent curvature currents $c_1(\overline{L_i})$. For any closed positive current $T$ on $X$ (or without), by the Bedford--Taylor theory (Chapter 8), the following current is well-defined 
+\[c_1(\overline{L_1}) \wedge \cdots c_1(\overline{L_m}) \wedge T.\]
+If $T$ is a BT current, this is BT. If all metrics are psh, then this is a positive current. If all metrics are PL and $T$ is skeletal, then this is a skeletal current. This formulation satisfies a projection formula, and is well behaved under change of base field and under finite morphism. 
 
-\subsection*{18.4: Monge--Amp\'{e}re operators (PL metrics). }
+If $X$ is proper, then the real number 
+\[\int_X c_1(\overline{L}_1) \wedge \cdots \wedge c_1(\overline{L_n})\] is independent of the choice of metrics. 
+
+Let $Y$ be a proper algebraic variety purely of dimension $n$, and let $Y^{\mathrm{an}}$ denote its Berkovich space. Let $L_1, \cdots, L_n$ be line bundles over $Y$, and let $\overline{L_i}$ donote line bundles over $Y^\na$ with any dpsh metrics. Then the following equality shows that the mass does not depend on the metrics: 
+\[\int_{Y^{\mathrm{an}}} c_1(\overline{L_1}) \wedge \cdots \wedge c_1(\overline{L_n}) = \int_Y c_1(L_1) \cdots c_1(L_n).\]
+
+\subsection*{18.4: Monge--Amp\'{e}re operators (PL metrics). }Let $X^\sharp$ be the collection of Abhyankar points in $X$, and let $X^\sharp_{\mathrm{str}}$ be the subset in $X^\sharp$ of points $x$ satisfying \[\mathrm{trdeg}_{\tilde{k}^1}(\widetilde{\mathcal{H}(x)}^1) = n.\] Let $(L_1, \ldots, L_n)$ be integral PL metrized line bundles over $X$, and let $S$ be the subset of ponts $x \in X$ such that the dimension of simultaneuous definiton of $\{\widetilde{L_{i,x}}\}_1^n$ is $n$. Then $S$ is a closed discrete subset of $X^\sharp$, and there are integers $(\lambda_x)_{x \in S}$ (which are functions in the residual line bundles $\widetilde{L_{i,x}}$) such that 
+\[\bigwedge_{i=1}^n c_1(L_i) = \sum_{x \in S} \lambda_x \delta_x.\]
+If $X$ is boundryless and the metrics are \emph{strictly} integral PL, then $\delta_x$ can be computed over the the Riemann-Zariski space as
+\[\int_{\mathbf{P}_{\widetilde{\mathcal{H}(x)}^1 / \tilde{k}^1}} c_1(\widetilde{L_{1,x}}^1) \cdots c_1(\widetilde{L_{n,x}}^1) = \int_{\mathbf{P}_{\widetilde{\mathcal{H}(x)} / \tilde{k}}} c_1(\widetilde{L_{1,x}}) \cdots c_1(\widetilde{L_{n,x}}).\] A formula with more decorations hold if the metrics are not striclty integral PL. Therefore, we get a multilinear, symmetric map $\mathrm{Pic}(X)^n \to \mathbf{Z}$, which is invariant under base change. 
+
+\subsection*{18.5: Formal calculus. }
+
+\subsection*{18.6: Relative Monge--Amp\'{e}re operator. }
+
+\subsection*{18.7: Bochner-Martinelli and Levine formulae). }
+
+\subsection*{18.8: Monge--Amp\'{e}re operators (formal metrics). }
+
+\subsection*{18.9: Detecting positivity using subvarieties. }
 
 \bibliographystyle{alpha}
 \bibliography{references}
